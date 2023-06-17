@@ -676,6 +676,8 @@ Returns the :ref:`Animation<class_Animation>` with the key ``name``. If the anim
 
 Returns the first :ref:`AnimationLibrary<class_AnimationLibrary>` with key ``name`` or ``null`` if not found.
 
+To get the **AnimationPlayer**'s global animation library, use ``get_animation_library("")``.
+
 .. rst-class:: classref-item-separator
 
 ----
@@ -906,3 +908,4 @@ If ``keep_state`` is ``true``, the animation state is not updated visually.
 .. |constructor| replace:: :abbr:`constructor (This method is used to construct a type.)`
 .. |static| replace:: :abbr:`static (This method doesn't need an instance to be called, so it can be called directly using the class name.)`
 .. |operator| replace:: :abbr:`operator (This method describes a valid operator to use with this type as left-hand operand.)`
+.. |bitfield| replace:: :abbr:`BitField (This value is an integer composed as a bitmask of the following flags.)`
