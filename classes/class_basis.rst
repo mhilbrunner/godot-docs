@@ -10,18 +10,18 @@
 Basis
 =====
 
-3×3 matrix datatype.
+A 3×3 matrix for representing 3D rotation and scale.
 
 .. rst-class:: classref-introduction-group
 
 Description
 -----------
 
-3×3 matrix used for 3D rotation and scale. Almost always used as an orthogonal basis for a :ref:`Transform3D<class_Transform3D>`.
+A 3×3 matrix used for representing 3D rotation and scale. Usually used as an orthogonal basis for a :ref:`Transform3D<class_Transform3D>`.
 
 Contains 3 vector fields X, Y and Z as its columns, which are typically interpreted as the local basis vectors of a transformation. For such use, it is composed of a scaling and a rotation matrix, in that order (M = R.S).
 
-Can also be accessed as array of 3D vectors. These vectors are normally orthogonal to each other, but are not necessarily normalized (due to scaling).
+Basis can also be accessed as an array of 3D vectors. These vectors are usually orthogonal to each other, but are not necessarily normalized (due to scaling).
 
 For more information, read the "Matrices and transforms" documentation article.
 
@@ -394,7 +394,7 @@ Returns the inverse of the matrix.
 
 :ref:`bool<class_bool>` **is_equal_approx** **(** :ref:`Basis<class_Basis>` b **)** |const|
 
-Returns ``true`` if this basis and ``b`` are approximately equal, by calling ``is_equal_approx`` on each component.
+Returns ``true`` if this basis and ``b`` are approximately equal, by calling :ref:`@GlobalScope.is_equal_approx<class_@GlobalScope_method_is_equal_approx>` on all vector components.
 
 .. rst-class:: classref-item-separator
 
@@ -406,7 +406,7 @@ Returns ``true`` if this basis and ``b`` are approximately equal, by calling ``i
 
 :ref:`bool<class_bool>` **is_finite** **(** **)** |const|
 
-Returns ``true`` if this basis is finite, by calling :ref:`@GlobalScope.is_finite<class_@GlobalScope_method_is_finite>` on each component.
+Returns ``true`` if this basis is finite, by calling :ref:`@GlobalScope.is_finite<class_@GlobalScope_method_is_finite>` on all vector components.
 
 .. rst-class:: classref-item-separator
 
@@ -619,3 +619,4 @@ Access basis components using their index. ``b[0]`` is equivalent to ``b.x``, ``
 .. |constructor| replace:: :abbr:`constructor (This method is used to construct a type.)`
 .. |static| replace:: :abbr:`static (This method doesn't need an instance to be called, so it can be called directly using the class name.)`
 .. |operator| replace:: :abbr:`operator (This method describes a valid operator to use with this type as left-hand operand.)`
+.. |bitfield| replace:: :abbr:`BitField (This value is an integer composed as a bitmask of the following flags.)`
