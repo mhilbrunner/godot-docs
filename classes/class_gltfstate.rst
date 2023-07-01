@@ -88,6 +88,8 @@ Methods
    +-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`GLTFMesh[]<class_GLTFMesh>`                     | :ref:`get_meshes<class_GLTFState_method_get_meshes>` **(** **)**                                                                                                                     |
    +-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`int<class_int>`                                 | :ref:`get_node_index<class_GLTFState_method_get_node_index>` **(** :ref:`Node<class_Node>` scene_node **)**                                                                          |
+   +-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`GLTFNode[]<class_GLTFNode>`                     | :ref:`get_nodes<class_GLTFState_method_get_nodes>` **(** **)**                                                                                                                       |
    +-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`Node<class_Node>`                               | :ref:`get_scene_node<class_GLTFState_method_get_scene_node>` **(** :ref:`int<class_int>` idx **)**                                                                                   |
@@ -546,6 +548,20 @@ Returns an array of all :ref:`GLTFMesh<class_GLTFMesh>`\ es in the GLTF file. Th
 
 ----
 
+.. _class_GLTFState_method_get_node_index:
+
+.. rst-class:: classref-method
+
+:ref:`int<class_int>` **get_node_index** **(** :ref:`Node<class_Node>` scene_node **)**
+
+Returns the index of the :ref:`GLTFNode<class_GLTFNode>` corresponding to this Godot scene node. This is the inverse of :ref:`get_scene_node<class_GLTFState_method_get_scene_node>`. Useful during the export process.
+
+\ **Note:** Not every Godot scene node will have a corresponding :ref:`GLTFNode<class_GLTFNode>`, and not every :ref:`GLTFNode<class_GLTFNode>` will have a scene node generated. If there is no :ref:`GLTFNode<class_GLTFNode>` index for this scene node, ``-1`` is returned.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_GLTFState_method_get_nodes:
 
 .. rst-class:: classref-method
@@ -564,7 +580,9 @@ Returns an array of all :ref:`GLTFNode<class_GLTFNode>`\ s in the GLTF file. The
 
 :ref:`Node<class_Node>` **get_scene_node** **(** :ref:`int<class_int>` idx **)**
 
-Returns the Godot scene node that corresponds to the same index as the :ref:`GLTFNode<class_GLTFNode>` it was generated from. Not every :ref:`GLTFNode<class_GLTFNode>` will have a scene node generated, and not every generated scene node will have a corresponding :ref:`GLTFNode<class_GLTFNode>`.
+Returns the Godot scene node that corresponds to the same index as the :ref:`GLTFNode<class_GLTFNode>` it was generated from. This is the inverse of :ref:`get_node_index<class_GLTFState_method_get_node_index>`. Useful during the import process.
+
+\ **Note:** Not every :ref:`GLTFNode<class_GLTFNode>` will have a scene node generated, and not every generated scene node will have a corresponding :ref:`GLTFNode<class_GLTFNode>`. If there is no scene node for this :ref:`GLTFNode<class_GLTFNode>` index, ``null`` is returned.
 
 .. rst-class:: classref-item-separator
 
@@ -862,3 +880,4 @@ Sets the unique node names in the state. This is used in both the import process
 .. |constructor| replace:: :abbr:`constructor (This method is used to construct a type.)`
 .. |static| replace:: :abbr:`static (This method doesn't need an instance to be called, so it can be called directly using the class name.)`
 .. |operator| replace:: :abbr:`operator (This method describes a valid operator to use with this type as left-hand operand.)`
+.. |bitfield| replace:: :abbr:`BitField (This value is an integer composed as a bitmask of the following flags.)`
