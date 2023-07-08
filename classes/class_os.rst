@@ -12,14 +12,14 @@ OS
 
 **Inherits:** :ref:`Object<class_Object>`
 
-Operating System functions.
+Provides access to common operating system functionalities.
 
 .. rst-class:: classref-introduction-group
 
 Description
 -----------
 
-Operating System functions. **OS** wraps the most common functionality to communicate with the host operating system, such as the video driver, delays, environment variables, execution of binaries, command line, etc.
+This class wraps the most common functionalities for communicating with the host operating system, such as the video driver, delays, environment variables, execution of binaries, command line, etc.
 
 \ **Note:** In Godot 4, **OS** functions related to window management were moved to the :ref:`DisplayServer<class_DisplayServer>` singleton.
 
@@ -736,7 +736,7 @@ Returns the path to the current engine executable.
 
 With this function, you can get the list of dangerous permissions that have been granted to the Android application.
 
-\ **Note:** This method is implemented on Android.
+\ **Note:** This method is implemented only on Android.
 
 .. rst-class:: classref-item-separator
 
@@ -1365,7 +1365,7 @@ At the moment this function is only used by ``AudioDriverOpenSL`` to request per
 
 With this function, you can request dangerous permissions since normal permissions are automatically granted at install time in Android applications.
 
-\ **Note:** This method is implemented on Android.
+\ **Note:** This method is implemented only on Android.
 
 .. rst-class:: classref-item-separator
 
@@ -1463,7 +1463,7 @@ If ``file_or_dir_path`` is a valid directory path, and ``open_folder`` is ``true
 
 Use :ref:`ProjectSettings.globalize_path<class_ProjectSettings_method_globalize_path>` to convert a ``res://`` or ``user://`` path into a system path for use with this method.
 
-\ **Note:** Currently this method is only implemented on Windows. On other platforms, it will fallback to :ref:`shell_open<class_OS_method_shell_open>` with a directory path for ``file_or_dir_path``.
+\ **Note:** Currently this method is only implemented on Windows and macOS. On other platforms, it will fallback to :ref:`shell_open<class_OS_method_shell_open>` with a directory path of ``file_or_dir_path`` with prefix ``file://``.
 
 .. rst-class:: classref-item-separator
 
@@ -1485,3 +1485,4 @@ Removes the environment ``variable`` from the current environment, if it exists.
 .. |constructor| replace:: :abbr:`constructor (This method is used to construct a type.)`
 .. |static| replace:: :abbr:`static (This method doesn't need an instance to be called, so it can be called directly using the class name.)`
 .. |operator| replace:: :abbr:`operator (This method describes a valid operator to use with this type as left-hand operand.)`
+.. |bitfield| replace:: :abbr:`BitField (This value is an integer composed as a bitmask of the following flags.)`
