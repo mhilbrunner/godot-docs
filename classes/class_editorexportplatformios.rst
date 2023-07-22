@@ -42,6 +42,8 @@ Properties
    +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`int<class_int>`               | :ref:`application/export_method_release<class_EditorExportPlatformIOS_property_application/export_method_release>`                               |
    +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`             | :ref:`application/export_project_only<class_EditorExportPlatformIOS_property_application/export_project_only>`                                   |
+   +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`int<class_int>`               | :ref:`application/icon_interpolation<class_EditorExportPlatformIOS_property_application/icon_interpolation>`                                     |
    +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`int<class_int>`               | :ref:`application/launch_screens_interpolation<class_EditorExportPlatformIOS_property_application/launch_screens_interpolation>`                 |
@@ -224,6 +226,18 @@ Application distribution target (release export).
 
 ----
 
+.. _class_EditorExportPlatformIOS_property_application/export_project_only:
+
+.. rst-class:: classref-property
+
+:ref:`bool<class_bool>` **application/export_project_only**
+
+If ``true``, exports iOS project files without building an XCArchive or ``.ipa`` file. If ``false``, exports iOS project files and builds an XCArchive and ``.ipa`` file at the same time. When combining Godot with Fastlane or other build pipelines, you may want to set this to ``true``.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_EditorExportPlatformIOS_property_application/icon_interpolation:
 
 .. rst-class:: classref-property
@@ -390,7 +404,7 @@ Path to the custom export template. If left empty, default template is used.
 
 :ref:`String<class_String>` **icons/app_store_1024x1024**
 
-App Store application icon file. If left empty, project icon is used instead. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+App Store application icon file. If left empty, it will fallback to :ref:`ProjectSettings.application/config/icon<class_ProjectSettings_property_application/config/icon>`. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
 
 .. rst-class:: classref-item-separator
 
@@ -402,7 +416,7 @@ App Store application icon file. If left empty, project icon is used instead. Se
 
 :ref:`String<class_String>` **icons/ipad_76x76**
 
-Home screen application icon file on iPad (1x DPI). If left empty, project icon is used instead. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+Home screen application icon file on iPad (1x DPI). If left empty, it will fallback to :ref:`ProjectSettings.application/config/icon<class_ProjectSettings_property_application/config/icon>`. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
 
 .. rst-class:: classref-item-separator
 
@@ -414,7 +428,7 @@ Home screen application icon file on iPad (1x DPI). If left empty, project icon 
 
 :ref:`String<class_String>` **icons/ipad_152x152**
 
-Home screen application icon file on iPad (2x DPI). If left empty, project icon is used instead. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+Home screen application icon file on iPad (2x DPI). If left empty, it will fallback to :ref:`ProjectSettings.application/config/icon<class_ProjectSettings_property_application/config/icon>`. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
 
 .. rst-class:: classref-item-separator
 
@@ -426,7 +440,7 @@ Home screen application icon file on iPad (2x DPI). If left empty, project icon 
 
 :ref:`String<class_String>` **icons/ipad_167x167**
 
-Home screen application icon file on iPad (3x DPI). If left empty, project icon is used instead. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+Home screen application icon file on iPad (3x DPI). If left empty, it will fallback to :ref:`ProjectSettings.application/config/icon<class_ProjectSettings_property_application/config/icon>`. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
 
 .. rst-class:: classref-item-separator
 
@@ -438,7 +452,7 @@ Home screen application icon file on iPad (3x DPI). If left empty, project icon 
 
 :ref:`String<class_String>` **icons/iphone_120x120**
 
-Home screen application icon file on iPhone (2x DPI). If left empty, project icon is used instead. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+Home screen application icon file on iPhone (2x DPI). If left empty, it will fallback to :ref:`ProjectSettings.application/config/icon<class_ProjectSettings_property_application/config/icon>`. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
 
 .. rst-class:: classref-item-separator
 
@@ -450,7 +464,7 @@ Home screen application icon file on iPhone (2x DPI). If left empty, project ico
 
 :ref:`String<class_String>` **icons/iphone_180x180**
 
-Home screen application icon file on iPhone (3x DPI). If left empty, project icon is used instead. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+Home screen application icon file on iPhone (3x DPI). If left empty, it will fallback to :ref:`ProjectSettings.application/config/icon<class_ProjectSettings_property_application/config/icon>`. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
 
 .. rst-class:: classref-item-separator
 
@@ -462,7 +476,7 @@ Home screen application icon file on iPhone (3x DPI). If left empty, project ico
 
 :ref:`String<class_String>` **icons/notification_40x40**
 
-Notification icon file on iPad and iPhone (2x DPI). If left empty, project icon is used instead. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+Notification icon file on iPad and iPhone (2x DPI). If left empty, it will fallback to :ref:`ProjectSettings.application/config/icon<class_ProjectSettings_property_application/config/icon>`. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
 
 .. rst-class:: classref-item-separator
 
@@ -474,7 +488,7 @@ Notification icon file on iPad and iPhone (2x DPI). If left empty, project icon 
 
 :ref:`String<class_String>` **icons/notification_60x60**
 
-Notification icon file on iPhone (3x DPI). If left empty, project icon is used instead. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+Notification icon file on iPhone (3x DPI). If left empty, it will fallback to :ref:`ProjectSettings.application/config/icon<class_ProjectSettings_property_application/config/icon>`. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
 
 .. rst-class:: classref-item-separator
 
@@ -486,7 +500,7 @@ Notification icon file on iPhone (3x DPI). If left empty, project icon is used i
 
 :ref:`String<class_String>` **icons/settings_58x58**
 
-Application settings icon file on iPad and iPhone (2x DPI). If left empty, project icon is used instead. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+Application settings icon file on iPad and iPhone (2x DPI). If left empty, it will fallback to :ref:`ProjectSettings.application/config/icon<class_ProjectSettings_property_application/config/icon>`. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
 
 .. rst-class:: classref-item-separator
 
@@ -498,7 +512,7 @@ Application settings icon file on iPad and iPhone (2x DPI). If left empty, proje
 
 :ref:`String<class_String>` **icons/settings_87x87**
 
-Application settings icon file on iPhone (3x DPI). If left empty, project icon is used instead. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+Application settings icon file on iPhone (3x DPI). If left empty, it will fallback to :ref:`ProjectSettings.application/config/icon<class_ProjectSettings_property_application/config/icon>`. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
 
 .. rst-class:: classref-item-separator
 
@@ -510,7 +524,7 @@ Application settings icon file on iPhone (3x DPI). If left empty, project icon i
 
 :ref:`String<class_String>` **icons/spotlight_40x40**
 
-Spotlight icon file on iPad (1x DPI). If left empty, project icon is used instead. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+Spotlight icon file on iPad (1x DPI). If left empty, it will fallback to :ref:`ProjectSettings.application/config/icon<class_ProjectSettings_property_application/config/icon>`. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
 
 .. rst-class:: classref-item-separator
 
@@ -522,7 +536,7 @@ Spotlight icon file on iPad (1x DPI). If left empty, project icon is used instea
 
 :ref:`String<class_String>` **icons/spotlight_80x80**
 
-Spotlight icon file on iPad and iPhone (2x DPI). If left empty, project icon is used instead. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+Spotlight icon file on iPad and iPhone (2x DPI). If left empty, it will fallback to :ref:`ProjectSettings.application/config/icon<class_ProjectSettings_property_application/config/icon>`. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
 
 .. rst-class:: classref-item-separator
 
@@ -534,7 +548,7 @@ Spotlight icon file on iPad and iPhone (2x DPI). If left empty, project icon is 
 
 :ref:`String<class_String>` **landscape_launch_screens/ipad_1024x768**
 
-Application launch screen image file, if left empty project splash screen is used instead.
+Application launch screen image file. If left empty, it will fallback to :ref:`ProjectSettings.application/boot_splash/image<class_ProjectSettings_property_application/boot_splash/image>`.
 
 .. rst-class:: classref-item-separator
 
@@ -546,7 +560,7 @@ Application launch screen image file, if left empty project splash screen is use
 
 :ref:`String<class_String>` **landscape_launch_screens/ipad_2048x1536**
 
-Application launch screen image file, if left empty project splash screen is used instead.
+Application launch screen image file. If left empty, it will fallback to :ref:`ProjectSettings.application/boot_splash/image<class_ProjectSettings_property_application/boot_splash/image>`.
 
 .. rst-class:: classref-item-separator
 
@@ -558,7 +572,7 @@ Application launch screen image file, if left empty project splash screen is use
 
 :ref:`String<class_String>` **landscape_launch_screens/iphone_2208x1242**
 
-Application launch screen image file, if left empty project splash screen is used instead.
+Application launch screen image file. If left empty, it will fallback to :ref:`ProjectSettings.application/boot_splash/image<class_ProjectSettings_property_application/boot_splash/image>`.
 
 .. rst-class:: classref-item-separator
 
@@ -570,7 +584,7 @@ Application launch screen image file, if left empty project splash screen is use
 
 :ref:`String<class_String>` **landscape_launch_screens/iphone_2436x1125**
 
-Application launch screen image file, if left empty project splash screen is used instead.
+Application launch screen image file. If left empty, it will fallback to :ref:`ProjectSettings.application/boot_splash/image<class_ProjectSettings_property_application/boot_splash/image>`.
 
 .. rst-class:: classref-item-separator
 
@@ -582,7 +596,7 @@ Application launch screen image file, if left empty project splash screen is use
 
 :ref:`String<class_String>` **portrait_launch_screens/ipad_768x1024**
 
-Application launch screen image file, if left empty project splash screen is used instead.
+Application launch screen image file. If left empty, it will fallback to :ref:`ProjectSettings.application/boot_splash/image<class_ProjectSettings_property_application/boot_splash/image>`.
 
 .. rst-class:: classref-item-separator
 
@@ -594,7 +608,7 @@ Application launch screen image file, if left empty project splash screen is use
 
 :ref:`String<class_String>` **portrait_launch_screens/ipad_1536x2048**
 
-Application launch screen image file, if left empty project splash screen is used instead.
+Application launch screen image file. If left empty, it will fallback to :ref:`ProjectSettings.application/boot_splash/image<class_ProjectSettings_property_application/boot_splash/image>`.
 
 .. rst-class:: classref-item-separator
 
@@ -606,7 +620,7 @@ Application launch screen image file, if left empty project splash screen is use
 
 :ref:`String<class_String>` **portrait_launch_screens/iphone_640x960**
 
-Application launch screen image file, if left empty project splash screen is used instead.
+Application launch screen image file. If left empty, it will fallback to :ref:`ProjectSettings.application/boot_splash/image<class_ProjectSettings_property_application/boot_splash/image>`.
 
 .. rst-class:: classref-item-separator
 
@@ -618,7 +632,7 @@ Application launch screen image file, if left empty project splash screen is use
 
 :ref:`String<class_String>` **portrait_launch_screens/iphone_640x1136**
 
-Application launch screen image file, if left empty project splash screen is used instead.
+Application launch screen image file. If left empty, it will fallback to :ref:`ProjectSettings.application/boot_splash/image<class_ProjectSettings_property_application/boot_splash/image>`.
 
 .. rst-class:: classref-item-separator
 
@@ -630,7 +644,7 @@ Application launch screen image file, if left empty project splash screen is use
 
 :ref:`String<class_String>` **portrait_launch_screens/iphone_750x1334**
 
-Application launch screen image file, if left empty project splash screen is used instead.
+Application launch screen image file. If left empty, it will fallback to :ref:`ProjectSettings.application/boot_splash/image<class_ProjectSettings_property_application/boot_splash/image>`.
 
 .. rst-class:: classref-item-separator
 
@@ -642,7 +656,7 @@ Application launch screen image file, if left empty project splash screen is use
 
 :ref:`String<class_String>` **portrait_launch_screens/iphone_1125x2436**
 
-Application launch screen image file, if left empty project splash screen is used instead.
+Application launch screen image file. If left empty, it will fallback to :ref:`ProjectSettings.application/boot_splash/image<class_ProjectSettings_property_application/boot_splash/image>`.
 
 .. rst-class:: classref-item-separator
 
@@ -654,7 +668,7 @@ Application launch screen image file, if left empty project splash screen is use
 
 :ref:`String<class_String>` **portrait_launch_screens/iphone_1242x2208**
 
-Application launch screen image file, if left empty project splash screen is used instead.
+Application launch screen image file. If left empty, it will fallback to :ref:`ProjectSettings.application/boot_splash/image<class_ProjectSettings_property_application/boot_splash/image>`.
 
 .. rst-class:: classref-item-separator
 
@@ -750,7 +764,7 @@ A custom background color of the storyboard launch screen.
 
 :ref:`String<class_String>` **storyboard/custom_image@2x**
 
-Application launch screen image file (2x DPI), if left empty project splash screen is used instead.
+Application launch screen image file (2x DPI). If left empty, it will fallback to :ref:`ProjectSettings.application/boot_splash/image<class_ProjectSettings_property_application/boot_splash/image>`.
 
 .. rst-class:: classref-item-separator
 
@@ -762,7 +776,7 @@ Application launch screen image file (2x DPI), if left empty project splash scre
 
 :ref:`String<class_String>` **storyboard/custom_image@3x**
 
-Application launch screen image file (3x DPI), if left empty project splash screen is used instead.
+Application launch screen image file (3x DPI). If left empty, it will fallback to :ref:`ProjectSettings.application/boot_splash/image<class_ProjectSettings_property_application/boot_splash/image>`.
 
 .. rst-class:: classref-item-separator
 
@@ -830,3 +844,4 @@ If ``true``, the app "Documents" folder can be accessed via iTunes file sharing.
 .. |constructor| replace:: :abbr:`constructor (This method is used to construct a type.)`
 .. |static| replace:: :abbr:`static (This method doesn't need an instance to be called, so it can be called directly using the class name.)`
 .. |operator| replace:: :abbr:`operator (This method describes a valid operator to use with this type as left-hand operand.)`
+.. |bitfield| replace:: :abbr:`BitField (This value is an integer composed as a bitmask of the following flags.)`
