@@ -19,7 +19,7 @@ Godot editor's interface.
 Description
 -----------
 
-EditorInterface gives you control over Godot editor's window. It allows customizing the window, saving and (re-)loading scenes, rendering mesh previews, inspecting and editing resources and objects, and provides access to :ref:`EditorSettings<class_EditorSettings>`, :ref:`EditorFileSystem<class_EditorFileSystem>`, :ref:`EditorResourcePreview<class_EditorResourcePreview>`, :ref:`ScriptEditor<class_ScriptEditor>`, the editor viewport, and information about scenes.
+**EditorInterface** gives you control over Godot editor's window. It allows customizing the window, saving and (re-)loading scenes, rendering mesh previews, inspecting and editing resources and objects, and provides access to :ref:`EditorSettings<class_EditorSettings>`, :ref:`EditorFileSystem<class_EditorFileSystem>`, :ref:`EditorResourcePreview<class_EditorResourcePreview>`, :ref:`ScriptEditor<class_ScriptEditor>`, the editor viewport, and information about scenes.
 
 \ **Note:** This class shouldn't be instantiated directly. Instead, access the singleton using :ref:`EditorPlugin.get_editor_interface<class_EditorPlugin_method_get_editor_interface>`.
 
@@ -95,6 +95,8 @@ Methods
    | :ref:`bool<class_bool>`                                   | :ref:`is_plugin_enabled<class_EditorInterface_method_is_plugin_enabled>` **(** :ref:`String<class_String>` plugin **)** |const|                                                                                                                        |
    +-----------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`Texture2D[]<class_Texture2D>`                       | :ref:`make_mesh_previews<class_EditorInterface_method_make_mesh_previews>` **(** :ref:`Mesh[]<class_Mesh>` meshes, :ref:`int<class_int>` preview_size **)**                                                                                            |
+   +-----------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | void                                                      | :ref:`mark_scene_as_unsaved<class_EditorInterface_method_mark_scene_as_unsaved>` **(** **)**                                                                                                                                                           |
    +-----------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | void                                                      | :ref:`open_scene_from_path<class_EditorInterface_method_open_scene_from_path>` **(** :ref:`String<class_String>` scene_filepath **)**                                                                                                                  |
    +-----------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -491,6 +493,18 @@ Returns mesh previews rendered at the given size as an :ref:`Array<class_Array>`
 
 ----
 
+.. _class_EditorInterface_method_mark_scene_as_unsaved:
+
+.. rst-class:: classref-method
+
+void **mark_scene_as_unsaved** **(** **)**
+
+Marks the current scene tab as unsaved.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_EditorInterface_method_open_scene_from_path:
 
 .. rst-class:: classref-method
@@ -693,3 +707,4 @@ Stops the scene that is currently playing.
 .. |constructor| replace:: :abbr:`constructor (This method is used to construct a type.)`
 .. |static| replace:: :abbr:`static (This method doesn't need an instance to be called, so it can be called directly using the class name.)`
 .. |operator| replace:: :abbr:`operator (This method describes a valid operator to use with this type as left-hand operand.)`
+.. |bitfield| replace:: :abbr:`BitField (This value is an integer composed as a bitmask of the following flags.)`
