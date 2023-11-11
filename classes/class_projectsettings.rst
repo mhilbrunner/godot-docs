@@ -129,6 +129,10 @@ Properties
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
    | :ref:`float<class_float>`                         | :ref:`audio/general/3d_panning_strength<class_ProjectSettings_property_audio/general/3d_panning_strength>`                                                                                                 | ``0.5``                                                                                          |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`                           | :ref:`audio/general/ios/mix_with_others<class_ProjectSettings_property_audio/general/ios/mix_with_others>`                                                                                                 | ``false``                                                                                        |
+   +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
+   | :ref:`int<class_int>`                             | :ref:`audio/general/ios/session_category<class_ProjectSettings_property_audio/general/ios/session_category>`                                                                                               | ``0``                                                                                            |
+   +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                           | :ref:`audio/general/text_to_speech<class_ProjectSettings_property_audio/general/text_to_speech>`                                                                                                           | ``false``                                                                                        |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
    | :ref:`int<class_int>`                             | :ref:`audio/video/video_delay_compensation_ms<class_ProjectSettings_property_audio/video/video_delay_compensation_ms>`                                                                                     | ``0``                                                                                            |
@@ -1305,23 +1309,27 @@ Properties
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
    | :ref:`int<class_int>`                             | :ref:`rendering/environment/volumetric_fog/volume_size<class_ProjectSettings_property_rendering/environment/volumetric_fog/volume_size>`                                                                   | ``64``                                                                                           |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>`                       | :ref:`rendering/gl_compatibility/driver<class_ProjectSettings_property_rendering/gl_compatibility/driver>`                                                                                                 | ``"opengl3"``                                                                                    |
+   | :ref:`String<class_String>`                       | :ref:`rendering/gl_compatibility/driver<class_ProjectSettings_property_rendering/gl_compatibility/driver>`                                                                                                 |                                                                                                  |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>`                       | :ref:`rendering/gl_compatibility/driver.android<class_ProjectSettings_property_rendering/gl_compatibility/driver.android>`                                                                                 | ``"opengl3"``                                                                                    |
+   | :ref:`String<class_String>`                       | :ref:`rendering/gl_compatibility/driver.android<class_ProjectSettings_property_rendering/gl_compatibility/driver.android>`                                                                                 |                                                                                                  |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>`                       | :ref:`rendering/gl_compatibility/driver.ios<class_ProjectSettings_property_rendering/gl_compatibility/driver.ios>`                                                                                         | ``"opengl3"``                                                                                    |
+   | :ref:`String<class_String>`                       | :ref:`rendering/gl_compatibility/driver.ios<class_ProjectSettings_property_rendering/gl_compatibility/driver.ios>`                                                                                         |                                                                                                  |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>`                       | :ref:`rendering/gl_compatibility/driver.linuxbsd<class_ProjectSettings_property_rendering/gl_compatibility/driver.linuxbsd>`                                                                               | ``"opengl3"``                                                                                    |
+   | :ref:`String<class_String>`                       | :ref:`rendering/gl_compatibility/driver.linuxbsd<class_ProjectSettings_property_rendering/gl_compatibility/driver.linuxbsd>`                                                                               |                                                                                                  |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>`                       | :ref:`rendering/gl_compatibility/driver.macos<class_ProjectSettings_property_rendering/gl_compatibility/driver.macos>`                                                                                     | ``"opengl3"``                                                                                    |
+   | :ref:`String<class_String>`                       | :ref:`rendering/gl_compatibility/driver.macos<class_ProjectSettings_property_rendering/gl_compatibility/driver.macos>`                                                                                     |                                                                                                  |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>`                       | :ref:`rendering/gl_compatibility/driver.web<class_ProjectSettings_property_rendering/gl_compatibility/driver.web>`                                                                                         | ``"opengl3"``                                                                                    |
+   | :ref:`String<class_String>`                       | :ref:`rendering/gl_compatibility/driver.web<class_ProjectSettings_property_rendering/gl_compatibility/driver.web>`                                                                                         |                                                                                                  |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>`                       | :ref:`rendering/gl_compatibility/driver.windows<class_ProjectSettings_property_rendering/gl_compatibility/driver.windows>`                                                                                 | ``"opengl3"``                                                                                    |
+   | :ref:`String<class_String>`                       | :ref:`rendering/gl_compatibility/driver.windows<class_ProjectSettings_property_rendering/gl_compatibility/driver.windows>`                                                                                 |                                                                                                  |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                           | :ref:`rendering/gl_compatibility/fallback_to_angle<class_ProjectSettings_property_rendering/gl_compatibility/fallback_to_angle>`                                                                           | ``true``                                                                                         |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-   | :ref:`Array<class_Array>`                         | :ref:`rendering/gl_compatibility/force_angle_on_devices<class_ProjectSettings_property_rendering/gl_compatibility/force_angle_on_devices>`                                                                 | ``[]``                                                                                           |
+   | :ref:`bool<class_bool>`                           | :ref:`rendering/gl_compatibility/fallback_to_gles<class_ProjectSettings_property_rendering/gl_compatibility/fallback_to_gles>`                                                                             | ``true``                                                                                         |
+   +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`                           | :ref:`rendering/gl_compatibility/fallback_to_native<class_ProjectSettings_property_rendering/gl_compatibility/fallback_to_native>`                                                                         | ``true``                                                                                         |
+   +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
+   | :ref:`Array<class_Array>`                         | :ref:`rendering/gl_compatibility/force_angle_on_devices<class_ProjectSettings_property_rendering/gl_compatibility/force_angle_on_devices>`                                                                 |                                                                                                  |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
    | :ref:`int<class_int>`                             | :ref:`rendering/gl_compatibility/item_buffer_size<class_ProjectSettings_property_rendering/gl_compatibility/item_buffer_size>`                                                                             | ``16384``                                                                                        |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
@@ -1445,17 +1453,17 @@ Properties
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
    | :ref:`String<class_String>`                       | :ref:`rendering/renderer/rendering_method.web<class_ProjectSettings_property_rendering/renderer/rendering_method.web>`                                                                                     | ``"gl_compatibility"``                                                                           |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>`                       | :ref:`rendering/rendering_device/driver<class_ProjectSettings_property_rendering/rendering_device/driver>`                                                                                                 | ``"vulkan"``                                                                                     |
+   | :ref:`String<class_String>`                       | :ref:`rendering/rendering_device/driver<class_ProjectSettings_property_rendering/rendering_device/driver>`                                                                                                 |                                                                                                  |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>`                       | :ref:`rendering/rendering_device/driver.android<class_ProjectSettings_property_rendering/rendering_device/driver.android>`                                                                                 | ``"vulkan"``                                                                                     |
+   | :ref:`String<class_String>`                       | :ref:`rendering/rendering_device/driver.android<class_ProjectSettings_property_rendering/rendering_device/driver.android>`                                                                                 |                                                                                                  |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>`                       | :ref:`rendering/rendering_device/driver.ios<class_ProjectSettings_property_rendering/rendering_device/driver.ios>`                                                                                         | ``"vulkan"``                                                                                     |
+   | :ref:`String<class_String>`                       | :ref:`rendering/rendering_device/driver.ios<class_ProjectSettings_property_rendering/rendering_device/driver.ios>`                                                                                         |                                                                                                  |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>`                       | :ref:`rendering/rendering_device/driver.linuxbsd<class_ProjectSettings_property_rendering/rendering_device/driver.linuxbsd>`                                                                               | ``"vulkan"``                                                                                     |
+   | :ref:`String<class_String>`                       | :ref:`rendering/rendering_device/driver.linuxbsd<class_ProjectSettings_property_rendering/rendering_device/driver.linuxbsd>`                                                                               |                                                                                                  |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>`                       | :ref:`rendering/rendering_device/driver.macos<class_ProjectSettings_property_rendering/rendering_device/driver.macos>`                                                                                     | ``"vulkan"``                                                                                     |
+   | :ref:`String<class_String>`                       | :ref:`rendering/rendering_device/driver.macos<class_ProjectSettings_property_rendering/rendering_device/driver.macos>`                                                                                     |                                                                                                  |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>`                       | :ref:`rendering/rendering_device/driver.windows<class_ProjectSettings_property_rendering/rendering_device/driver.windows>`                                                                                 | ``"vulkan"``                                                                                     |
+   | :ref:`String<class_String>`                       | :ref:`rendering/rendering_device/driver.windows<class_ProjectSettings_property_rendering/rendering_device/driver.windows>`                                                                                 |                                                                                                  |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
    | :ref:`float<class_float>`                         | :ref:`rendering/rendering_device/pipeline_cache/save_chunk_size_mb<class_ProjectSettings_property_rendering/rendering_device/pipeline_cache/save_chunk_size_mb>`                                           | ``3.0``                                                                                          |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
@@ -2028,7 +2036,7 @@ If :ref:`display/window/vsync/vsync_mode<class_ProjectSettings_property_display/
 
 See also :ref:`physics/common/physics_ticks_per_second<class_ProjectSettings_property_physics/common/physics_ticks_per_second>`.
 
-This setting can be overridden using the ``--max-fps <fps;>`` command line argument (including with a value of ``0`` for unlimited framerate).
+This setting can be overridden using the ``--max-fps <fps>`` command line argument (including with a value of ``0`` for unlimited framerate).
 
 \ **Note:** This property is only read when the project starts. To change the rendering FPS cap at runtime, set :ref:`Engine.max_fps<class_Engine_property_max_fps>` instead.
 
@@ -2179,6 +2187,32 @@ The default value of ``0.5`` is tuned for headphones. When using speakers, you m
 The base strength of the panning effect for all :ref:`AudioStreamPlayer3D<class_AudioStreamPlayer3D>` nodes. The panning strength can be further scaled on each Node using :ref:`AudioStreamPlayer3D.panning_strength<class_AudioStreamPlayer3D_property_panning_strength>`. A value of ``0.0`` disables stereo panning entirely, leaving only volume attenuation in place. A value of ``1.0`` completely mutes one of the channels if the sound is located exactly to the left (or right) of the listener.
 
 The default value of ``0.5`` is tuned for headphones. When using speakers, you may find lower values to sound better as speakers have a lower stereo separation compared to headphones.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ProjectSettings_property_audio/general/ios/mix_with_others:
+
+.. rst-class:: classref-property
+
+:ref:`bool<class_bool>` **audio/general/ios/mix_with_others** = ``false``
+
+Sets the `mixWithOthers <https://developer.apple.com/documentation/avfaudio/avaudiosession/categoryoptions/1616611-mixwithothers>`__ option for the AVAudioSession on iOS. This will override the mix behavior, if the category is set to ``Play and Record``, ``Playback``, or ``Multi Route``.
+
+\ ``Ambient`` always has this set per default.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ProjectSettings_property_audio/general/ios/session_category:
+
+.. rst-class:: classref-property
+
+:ref:`int<class_int>` **audio/general/ios/session_category** = ``0``
+
+Sets the `AVAudioSessionCategory <https://developer.apple.com/documentation/avfaudio/avaudiosessioncategory>`__ on iOS. Use the ``Playback`` category to get sound output, even if the phone is in silent mode.
 
 .. rst-class:: classref-item-separator
 
@@ -2855,6 +2889,8 @@ When set to ``warn`` or ``error``, produces a warning or an error respectively w
 :ref:`int<class_int>` **debug/gdscript/warnings/untyped_declaration** = ``0``
 
 When set to ``warn`` or ``error``, produces a warning or an error respectively when a variable or parameter has no static type, or if a function has no static return type.
+
+\ **Note:** This warning is recommended together with :ref:`EditorSettings.text_editor/completion/add_type_hints<class_EditorSettings_property_text_editor/completion/add_type_hints>` to help achieve type safety.
 
 .. rst-class:: classref-item-separator
 
@@ -3866,7 +3902,7 @@ On desktop platforms, overrides the game's initial window height. See also :ref:
 
 On desktop platforms, overrides the game's initial window width. See also :ref:`display/window/size/window_height_override<class_ProjectSettings_property_display/window/size/window_height_override>`, :ref:`display/window/size/viewport_width<class_ProjectSettings_property_display/window/size/viewport_width>` and :ref:`display/window/size/viewport_height<class_ProjectSettings_property_display/window/size/viewport_height>`.
 
-\ **Note:** By default, or when set to ``0``, the initial window width is the viewport :ref:`display/window/size/viewport_width<class_ProjectSettings_property_display/window/size/viewport_width>`. This setting is ignored on iOS, Android, and Web.
+\ **Note:** By default, or when set to ``0``, the initial window width is the :ref:`display/window/size/viewport_width<class_ProjectSettings_property_display/window/size/viewport_width>`. This setting is ignored on iOS, Android, and Web.
 
 .. rst-class:: classref-item-separator
 
@@ -3923,6 +3959,12 @@ The scale factor multiplier to use for 2D elements. This multiplies the final sc
 :ref:`String<class_String>` **display/window/stretch/scale_mode** = ``"fractional"``
 
 The policy to use to determine the final scale factor for 2D elements. This affects how :ref:`display/window/stretch/scale<class_ProjectSettings_property_display/window/stretch/scale>` is applied, in addition to the automatic scale factor determined by :ref:`display/window/stretch/mode<class_ProjectSettings_property_display/window/stretch/mode>`.
+
+\ **"fractional"**: The scale factor will not be modified.
+
+\ **"integer"**: The scale factor will be floored to an integer value, which means that the screen size will always be an integer multiple of the base viewport size. This provides a crisp pixel art appearance.
+
+\ **Note:** When using integer scaling with a stretch mode, resizing the window to be smaller than the base viewport size will clip the contents. Consider preventing that by setting :ref:`Window.min_size<class_Window_property_min_size>` to the same value as the base viewport size defined in :ref:`display/window/size/viewport_width<class_ProjectSettings_property_display/window/size/viewport_width>` and :ref:`display/window/size/viewport_height<class_ProjectSettings_property_display/window/size/viewport_height>`.
 
 .. rst-class:: classref-item-separator
 
@@ -9066,7 +9108,7 @@ Controls how much physics ticks are synchronized with real time. For 0 or less, 
 
 \ **Note:** For best results, when using a custom physics interpolation solution, the physics jitter fix should be disabled by setting :ref:`physics/common/physics_jitter_fix<class_ProjectSettings_property_physics/common/physics_jitter_fix>` to ``0``.
 
-\ **Note:** This property is only read when the project starts. To change the physics FPS at runtime, set :ref:`Engine.physics_jitter_fix<class_Engine_property_physics_jitter_fix>` instead.
+\ **Note:** This property is only read when the project starts. To change the physics jitter fix at runtime, set :ref:`Engine.physics_jitter_fix<class_Engine_property_physics_jitter_fix>` instead.
 
 .. rst-class:: classref-item-separator
 
@@ -9078,7 +9120,7 @@ Controls how much physics ticks are synchronized with real time. For 0 or less, 
 
 :ref:`int<class_int>` **physics/common/physics_ticks_per_second** = ``60``
 
-The number of fixed iterations per second. This controls how often physics simulation and :ref:`Node._physics_process<class_Node_method__physics_process>` methods are run. See also :ref:`application/run/max_fps<class_ProjectSettings_property_application/run/max_fps>`.
+The number of fixed iterations per second. This controls how often physics simulation and :ref:`Node._physics_process<class_Node_private_method__physics_process>` methods are run. See also :ref:`application/run/max_fps<class_ProjectSettings_property_application/run/max_fps>`.
 
 \ **Note:** This property is only read when the project starts. To change the physics FPS at runtime, set :ref:`Engine.physics_ticks_per_second<class_Engine_property_physics_ticks_per_second>` instead.
 
@@ -9642,7 +9684,7 @@ Base size used to determine size of froxel buffer in the camera X-axis and Y-axi
 
 .. rst-class:: classref-property
 
-:ref:`String<class_String>` **rendering/gl_compatibility/driver** = ``"opengl3"``
+:ref:`String<class_String>` **rendering/gl_compatibility/driver**
 
 Sets the driver to be used by the renderer when using the Compatibility renderer. This property can not be edited directly, instead, set the driver using the platform-specific overrides.
 
@@ -9654,7 +9696,7 @@ Sets the driver to be used by the renderer when using the Compatibility renderer
 
 .. rst-class:: classref-property
 
-:ref:`String<class_String>` **rendering/gl_compatibility/driver.android** = ``"opengl3"``
+:ref:`String<class_String>` **rendering/gl_compatibility/driver.android**
 
 Android override for :ref:`rendering/gl_compatibility/driver<class_ProjectSettings_property_rendering/gl_compatibility/driver>`.
 
@@ -9666,7 +9708,7 @@ Android override for :ref:`rendering/gl_compatibility/driver<class_ProjectSettin
 
 .. rst-class:: classref-property
 
-:ref:`String<class_String>` **rendering/gl_compatibility/driver.ios** = ``"opengl3"``
+:ref:`String<class_String>` **rendering/gl_compatibility/driver.ios**
 
 iOS override for :ref:`rendering/gl_compatibility/driver<class_ProjectSettings_property_rendering/gl_compatibility/driver>`.
 
@@ -9678,7 +9720,7 @@ iOS override for :ref:`rendering/gl_compatibility/driver<class_ProjectSettings_p
 
 .. rst-class:: classref-property
 
-:ref:`String<class_String>` **rendering/gl_compatibility/driver.linuxbsd** = ``"opengl3"``
+:ref:`String<class_String>` **rendering/gl_compatibility/driver.linuxbsd**
 
 LinuxBSD override for :ref:`rendering/gl_compatibility/driver<class_ProjectSettings_property_rendering/gl_compatibility/driver>`.
 
@@ -9690,7 +9732,7 @@ LinuxBSD override for :ref:`rendering/gl_compatibility/driver<class_ProjectSetti
 
 .. rst-class:: classref-property
 
-:ref:`String<class_String>` **rendering/gl_compatibility/driver.macos** = ``"opengl3"``
+:ref:`String<class_String>` **rendering/gl_compatibility/driver.macos**
 
 macOS override for :ref:`rendering/gl_compatibility/driver<class_ProjectSettings_property_rendering/gl_compatibility/driver>`.
 
@@ -9702,7 +9744,7 @@ macOS override for :ref:`rendering/gl_compatibility/driver<class_ProjectSettings
 
 .. rst-class:: classref-property
 
-:ref:`String<class_String>` **rendering/gl_compatibility/driver.web** = ``"opengl3"``
+:ref:`String<class_String>` **rendering/gl_compatibility/driver.web**
 
 Web override for :ref:`rendering/gl_compatibility/driver<class_ProjectSettings_property_rendering/gl_compatibility/driver>`.
 
@@ -9714,7 +9756,7 @@ Web override for :ref:`rendering/gl_compatibility/driver<class_ProjectSettings_p
 
 .. rst-class:: classref-property
 
-:ref:`String<class_String>` **rendering/gl_compatibility/driver.windows** = ``"opengl3"``
+:ref:`String<class_String>` **rendering/gl_compatibility/driver.windows**
 
 Windows override for :ref:`rendering/gl_compatibility/driver<class_ProjectSettings_property_rendering/gl_compatibility/driver>`.
 
@@ -9730,6 +9772,36 @@ Windows override for :ref:`rendering/gl_compatibility/driver<class_ProjectSettin
 
 If ``true``, the compatibility renderer will fall back to ANGLE if native OpenGL is not supported or the device is listed in :ref:`rendering/gl_compatibility/force_angle_on_devices<class_ProjectSettings_property_rendering/gl_compatibility/force_angle_on_devices>`.
 
+\ **Note:** This setting is implemented only on Windows.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ProjectSettings_property_rendering/gl_compatibility/fallback_to_gles:
+
+.. rst-class:: classref-property
+
+:ref:`bool<class_bool>` **rendering/gl_compatibility/fallback_to_gles** = ``true``
+
+If ``true``, the compatibility renderer will fall back to OpenGLES if desktop OpenGL is not supported.
+
+\ **Note:** This setting is implemented only on Linux/X11.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ProjectSettings_property_rendering/gl_compatibility/fallback_to_native:
+
+.. rst-class:: classref-property
+
+:ref:`bool<class_bool>` **rendering/gl_compatibility/fallback_to_native** = ``true``
+
+If ``true``, the compatibility renderer will fall back to native OpenGL if ANGLE over Metal is not supported.
+
+\ **Note:** This setting is implemented only on macOS.
+
 .. rst-class:: classref-item-separator
 
 ----
@@ -9738,11 +9810,13 @@ If ``true``, the compatibility renderer will fall back to ANGLE if native OpenGL
 
 .. rst-class:: classref-property
 
-:ref:`Array<class_Array>` **rendering/gl_compatibility/force_angle_on_devices** = ``[]``
+:ref:`Array<class_Array>` **rendering/gl_compatibility/force_angle_on_devices**
 
 An :ref:`Array<class_Array>` of devices which should always use the ANGLE renderer.
 
 Each entry is a :ref:`Dictionary<class_Dictionary>` with the following keys: ``vendor`` and ``name``. ``name`` can be set to ``*`` to add all devices with the specified ``vendor``.
+
+\ **Note:** This setting is implemented only on Windows.
 
 .. rst-class:: classref-item-separator
 
@@ -10556,7 +10630,7 @@ Override for :ref:`rendering/renderer/rendering_method<class_ProjectSettings_pro
 
 .. rst-class:: classref-property
 
-:ref:`String<class_String>` **rendering/rendering_device/driver** = ``"vulkan"``
+:ref:`String<class_String>` **rendering/rendering_device/driver**
 
 Sets the driver to be used by the renderer when using a RenderingDevice-based renderer like the clustered renderer or the mobile renderer. This property can not be edited directly, instead, set the driver using the platform-specific overrides.
 
@@ -10568,7 +10642,7 @@ Sets the driver to be used by the renderer when using a RenderingDevice-based re
 
 .. rst-class:: classref-property
 
-:ref:`String<class_String>` **rendering/rendering_device/driver.android** = ``"vulkan"``
+:ref:`String<class_String>` **rendering/rendering_device/driver.android**
 
 Android override for :ref:`rendering/rendering_device/driver<class_ProjectSettings_property_rendering/rendering_device/driver>`.
 
@@ -10580,7 +10654,7 @@ Android override for :ref:`rendering/rendering_device/driver<class_ProjectSettin
 
 .. rst-class:: classref-property
 
-:ref:`String<class_String>` **rendering/rendering_device/driver.ios** = ``"vulkan"``
+:ref:`String<class_String>` **rendering/rendering_device/driver.ios**
 
 iOS override for :ref:`rendering/rendering_device/driver<class_ProjectSettings_property_rendering/rendering_device/driver>`.
 
@@ -10592,7 +10666,7 @@ iOS override for :ref:`rendering/rendering_device/driver<class_ProjectSettings_p
 
 .. rst-class:: classref-property
 
-:ref:`String<class_String>` **rendering/rendering_device/driver.linuxbsd** = ``"vulkan"``
+:ref:`String<class_String>` **rendering/rendering_device/driver.linuxbsd**
 
 LinuxBSD override for :ref:`rendering/rendering_device/driver<class_ProjectSettings_property_rendering/rendering_device/driver>`.
 
@@ -10604,7 +10678,7 @@ LinuxBSD override for :ref:`rendering/rendering_device/driver<class_ProjectSetti
 
 .. rst-class:: classref-property
 
-:ref:`String<class_String>` **rendering/rendering_device/driver.macos** = ``"vulkan"``
+:ref:`String<class_String>` **rendering/rendering_device/driver.macos**
 
 macOS override for :ref:`rendering/rendering_device/driver<class_ProjectSettings_property_rendering/rendering_device/driver>`.
 
@@ -10616,7 +10690,7 @@ macOS override for :ref:`rendering/rendering_device/driver<class_ProjectSettings
 
 .. rst-class:: classref-property
 
-:ref:`String<class_String>` **rendering/rendering_device/driver.windows** = ``"vulkan"``
+:ref:`String<class_String>` **rendering/rendering_device/driver.windows**
 
 Windows override for :ref:`rendering/rendering_device/driver<class_ProjectSettings_property_rendering/rendering_device/driver>`.
 
@@ -10915,8 +10989,6 @@ Affects the final texture sharpness by reading from a lower or higher mipmap (al
 Enabling temporal antialiasing (:ref:`rendering/anti_aliasing/quality/use_taa<class_ProjectSettings_property_rendering/anti_aliasing/quality/use_taa>`) will automatically apply a ``-0.5`` offset to this value, while enabling FXAA (:ref:`rendering/anti_aliasing/quality/screen_space_aa<class_ProjectSettings_property_rendering/anti_aliasing/quality/screen_space_aa>`) will automatically apply a ``-0.25`` offset to this value. If both TAA and FXAA are enabled at the same time, an offset of ``-0.75`` is applied to this value.
 
 \ **Note:** If :ref:`rendering/scaling_3d/scale<class_ProjectSettings_property_rendering/scaling_3d/scale>` is lower than ``1.0`` (exclusive), :ref:`rendering/textures/default_filters/texture_mipmap_bias<class_ProjectSettings_property_rendering/textures/default_filters/texture_mipmap_bias>` is used to adjust the automatic mipmap bias which is calculated internally based on the scale factor. The formula for this is ``log2(scaling_3d_scale) + mipmap_bias``.
-
-\ **Note:** This property is only read when the project starts. To change the mipmap LOD bias at run-time, set :ref:`Viewport.texture_mipmap_bias<class_Viewport_property_texture_mipmap_bias>` instead.
 
 .. rst-class:: classref-item-separator
 
