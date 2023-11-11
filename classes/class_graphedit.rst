@@ -92,13 +92,13 @@ Methods
    :widths: auto
 
    +-----------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`PackedVector2Array<class_PackedVector2Array>` | :ref:`_get_connection_line<class_GraphEdit_method__get_connection_line>` **(** :ref:`Vector2<class_Vector2>` from_position, :ref:`Vector2<class_Vector2>` to_position **)** |virtual| |const|                                                                                           |
+   | :ref:`PackedVector2Array<class_PackedVector2Array>` | :ref:`_get_connection_line<class_GraphEdit_private_method__get_connection_line>` **(** :ref:`Vector2<class_Vector2>` from_position, :ref:`Vector2<class_Vector2>` to_position **)** |virtual| |const|                                                                                   |
    +-----------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`bool<class_bool>`                             | :ref:`_is_in_input_hotzone<class_GraphEdit_method__is_in_input_hotzone>` **(** :ref:`Object<class_Object>` in_node, :ref:`int<class_int>` in_port, :ref:`Vector2<class_Vector2>` mouse_position **)** |virtual|                                                                         |
+   | :ref:`bool<class_bool>`                             | :ref:`_is_in_input_hotzone<class_GraphEdit_private_method__is_in_input_hotzone>` **(** :ref:`Object<class_Object>` in_node, :ref:`int<class_int>` in_port, :ref:`Vector2<class_Vector2>` mouse_position **)** |virtual|                                                                 |
    +-----------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`bool<class_bool>`                             | :ref:`_is_in_output_hotzone<class_GraphEdit_method__is_in_output_hotzone>` **(** :ref:`Object<class_Object>` in_node, :ref:`int<class_int>` in_port, :ref:`Vector2<class_Vector2>` mouse_position **)** |virtual|                                                                       |
+   | :ref:`bool<class_bool>`                             | :ref:`_is_in_output_hotzone<class_GraphEdit_private_method__is_in_output_hotzone>` **(** :ref:`Object<class_Object>` in_node, :ref:`int<class_int>` in_port, :ref:`Vector2<class_Vector2>` mouse_position **)** |virtual|                                                               |
    +-----------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`bool<class_bool>`                             | :ref:`_is_node_hover_valid<class_GraphEdit_method__is_node_hover_valid>` **(** :ref:`StringName<class_StringName>` from_node, :ref:`int<class_int>` from_port, :ref:`StringName<class_StringName>` to_node, :ref:`int<class_int>` to_port **)** |virtual|                               |
+   | :ref:`bool<class_bool>`                             | :ref:`_is_node_hover_valid<class_GraphEdit_private_method__is_node_hover_valid>` **(** :ref:`StringName<class_StringName>` from_node, :ref:`int<class_int>` from_port, :ref:`StringName<class_StringName>` to_node, :ref:`int<class_int>` to_port **)** |virtual|                       |
    +-----------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | void                                                | :ref:`add_valid_connection_type<class_GraphEdit_method_add_valid_connection_type>` **(** :ref:`int<class_int>` from_type, :ref:`int<class_int>` to_type **)**                                                                                                                           |
    +-----------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -797,7 +797,7 @@ The step of each zoom level.
 Method Descriptions
 -------------------
 
-.. _class_GraphEdit_method__get_connection_line:
+.. _class_GraphEdit_private_method__get_connection_line:
 
 .. rst-class:: classref-method
 
@@ -809,7 +809,7 @@ Virtual method which can be overridden to customize how connections are drawn.
 
 ----
 
-.. _class_GraphEdit_method__is_in_input_hotzone:
+.. _class_GraphEdit_private_method__is_in_input_hotzone:
 
 .. rst-class:: classref-method
 
@@ -834,13 +834,13 @@ Below is a sample code to help get started:
 
 ----
 
-.. _class_GraphEdit_method__is_in_output_hotzone:
+.. _class_GraphEdit_private_method__is_in_output_hotzone:
 
 .. rst-class:: classref-method
 
 :ref:`bool<class_bool>` **_is_in_output_hotzone** **(** :ref:`Object<class_Object>` in_node, :ref:`int<class_int>` in_port, :ref:`Vector2<class_Vector2>` mouse_position **)** |virtual|
 
-Returns whether the ``mouse_position`` is in the output hot zone. For more information on hot zones, see :ref:`_is_in_input_hotzone<class_GraphEdit_method__is_in_input_hotzone>`.
+Returns whether the ``mouse_position`` is in the output hot zone. For more information on hot zones, see :ref:`_is_in_input_hotzone<class_GraphEdit_private_method__is_in_input_hotzone>`.
 
 Below is a sample code to help get started:
 
@@ -857,7 +857,7 @@ Below is a sample code to help get started:
 
 ----
 
-.. _class_GraphEdit_method__is_node_hover_valid:
+.. _class_GraphEdit_private_method__is_node_hover_valid:
 
 .. rst-class:: classref-method
 
@@ -1100,7 +1100,7 @@ Disallows to disconnect nodes when dragging from the right port of the :ref:`Gra
 
 void **set_connection_activity** **(** :ref:`StringName<class_StringName>` from_node, :ref:`int<class_int>` from_port, :ref:`StringName<class_StringName>` to_node, :ref:`int<class_int>` to_port, :ref:`float<class_float>` amount **)**
 
-Sets the coloration of the connection between ``from_node``'s ``from_port`` and ``to_node``'s ``to_port`` with the color provided in the :ref:`activity<class_GraphEdit_theme_color_activity>` theme property.
+Sets the coloration of the connection between ``from_node``'s ``from_port`` and ``to_node``'s ``to_port`` with the color provided in the :ref:`activity<class_GraphEdit_theme_color_activity>` theme property. The color is linearly interpolated between the connection color and the activity color using ``amount`` as weight.
 
 .. rst-class:: classref-item-separator
 
@@ -1129,9 +1129,7 @@ Theme Property Descriptions
 
 :ref:`Color<class_Color>` **activity** = ``Color(1, 1, 1, 1)``
 
-.. container:: contribute
-
-	There is currently no description for this theme property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Color of the connection's activity (see :ref:`set_connection_activity<class_GraphEdit_method_set_connection_activity>`).
 
 .. rst-class:: classref-item-separator
 
