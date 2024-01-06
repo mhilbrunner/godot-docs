@@ -93,6 +93,8 @@ Methods
    +---------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`int<class_int>`                       | :ref:`get_node_count<class_SceneTree_method_get_node_count>` **(** **)** |const|                                                                                                                                                                        |
    +---------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`int<class_int>`                       | :ref:`get_node_count_in_group<class_SceneTree_method_get_node_count_in_group>` **(** :ref:`StringName<class_StringName>` group **)** |const|                                                                                                            |
+   +---------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`Node[]<class_Node>`                   | :ref:`get_nodes_in_group<class_SceneTree_method_get_nodes_in_group>` **(** :ref:`StringName<class_StringName>` group **)**                                                                                                                              |
    +---------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`Tween[]<class_Tween>`                 | :ref:`get_processed_tweens<class_SceneTree_method_get_processed_tweens>` **(** **)**                                                                                                                                                                    |
@@ -512,7 +514,7 @@ Changes the running scene to the one at the given ``path``, after loading it int
 
 Returns :ref:`@GlobalScope.OK<class_@GlobalScope_constant_OK>` on success, :ref:`@GlobalScope.ERR_CANT_OPEN<class_@GlobalScope_constant_ERR_CANT_OPEN>` if the ``path`` cannot be loaded into a :ref:`PackedScene<class_PackedScene>`, or :ref:`@GlobalScope.ERR_CANT_CREATE<class_@GlobalScope_constant_ERR_CANT_CREATE>` if that scene cannot be instantiated.
 
-\ **Note:** The new scene node is added to the tree at the end of the frame. This ensures that both scenes aren't running at the same time, while still freeing the previous scene in a safe way similar to :ref:`Node.queue_free<class_Node_method_queue_free>`. As such, you won't be able to access the loaded scene immediately after the :ref:`change_scene_to_file<class_SceneTree_method_change_scene_to_file>` call.
+\ **Note:** See :ref:`change_scene_to_packed<class_SceneTree_method_change_scene_to_packed>` for details on the order of operations.
 
 .. rst-class:: classref-item-separator
 
@@ -528,7 +530,13 @@ Changes the running scene to a new instance of the given :ref:`PackedScene<class
 
 Returns :ref:`@GlobalScope.OK<class_@GlobalScope_constant_OK>` on success, :ref:`@GlobalScope.ERR_CANT_CREATE<class_@GlobalScope_constant_ERR_CANT_CREATE>` if the scene cannot be instantiated, or :ref:`@GlobalScope.ERR_INVALID_PARAMETER<class_@GlobalScope_constant_ERR_INVALID_PARAMETER>` if the scene is invalid.
 
-\ **Note:** The new scene node is added to the tree at the end of the frame. You won't be able to access it immediately after the :ref:`change_scene_to_packed<class_SceneTree_method_change_scene_to_packed>` call.
+\ **Note:** Operations happen in the following order when :ref:`change_scene_to_packed<class_SceneTree_method_change_scene_to_packed>` is called:
+
+1. The current scene node is immediately removed from the tree. From that point, :ref:`Node.get_tree<class_Node_method_get_tree>` called on the current (outgoing) scene will return ``null``. :ref:`current_scene<class_SceneTree_property_current_scene>` will be ``null``, too, because the new scene is not available yet.
+
+2. At the end of the frame, the formerly current scene, already removed from the tree, will be deleted (freed from memory) and then the new scene will be instantiated and added to the tree. :ref:`Node.get_tree<class_Node_method_get_tree>` and :ref:`current_scene<class_SceneTree_property_current_scene>` will be back to working as usual.
+
+This ensures that both scenes aren't running at the same time, while still freeing the previous scene in a safe way similar to :ref:`Node.queue_free<class_Node_method_queue_free>`.
 
 .. rst-class:: classref-item-separator
 
@@ -636,6 +644,18 @@ Searches for the :ref:`MultiplayerAPI<class_MultiplayerAPI>` configured for the 
 :ref:`int<class_int>` **get_node_count** **(** **)** |const|
 
 Returns the number of nodes in this **SceneTree**.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_SceneTree_method_get_node_count_in_group:
+
+.. rst-class:: classref-method
+
+:ref:`int<class_int>` **get_node_count_in_group** **(** :ref:`StringName<class_StringName>` group **)** |const|
+
+Returns the number of nodes assigned to the given group.
 
 .. rst-class:: classref-item-separator
 
