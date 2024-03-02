@@ -262,8 +262,11 @@ Nodes
     class_window
     class_worldenvironment
     class_xranchor3d
+    class_xrbodymodifier3d
     class_xrcamera3d
     class_xrcontroller3d
+    class_xrfacemodifier3d
+    class_xrhandmodifier3d
     class_xrnode3d
     class_xrorigin3d
 
@@ -355,6 +358,8 @@ Resources
     class_capsuleshape3d
     class_circleshape2d
     class_codehighlighter
+    class_compositor
+    class_compositoreffect
     class_compressedcubemap
     class_compressedcubemaparray
     class_compressedtexture2d
@@ -381,6 +386,8 @@ Resources
     class_editorsyntaxhighlighter
     class_environment
     class_fastnoiselite
+    class_fbxdocument
+    class_fbxstate
     class_fogmaterial
     class_font
     class_fontfile
@@ -720,8 +727,9 @@ Other objects
     class_editorresourcetooltipplugin
     class_editorsceneformatimporter
     class_editorsceneformatimporterblend
-    class_editorsceneformatimporterfbx
+    class_editorsceneformatimporterfbx2gltf
     class_editorsceneformatimportergltf
+    class_editorsceneformatimporterufbx
     class_editorscenepostimport
     class_editorscenepostimportplugin
     class_editorscript
@@ -738,6 +746,7 @@ Other objects
     class_engineprofiler
     class_expression
     class_fileaccess
+    class_framebuffercacherd
     class_gdextensionmanager
     class_geometry2d
     class_geometry3d
@@ -842,12 +851,18 @@ Other objects
     class_refcounted
     class_regex
     class_regexmatch
+    class_renderdata
+    class_renderdataextension
+    class_renderdatard
     class_renderingdevice
     class_renderingserver
     class_renderscenebuffers
     class_renderscenebuffersconfiguration
     class_renderscenebuffersextension
     class_renderscenebuffersrd
+    class_renderscenedata
+    class_renderscenedataextension
+    class_renderscenedatard
     class_resource
     class_resourceformatloader
     class_resourceformatsaver
@@ -906,6 +921,7 @@ Other objects
     class_tweener
     class_udpserver
     class_undoredo
+    class_uniformsetcacherd
     class_upnp
     class_upnpdevice
     class_weakref
@@ -919,6 +935,9 @@ Other objects
     class_webxrinterface
     class_workerthreadpool
     class_xmlparser
+    class_xrbodytracker
+    class_xrfacetracker
+    class_xrhandtracker
     class_xrinterface
     class_xrinterfaceextension
     class_xrpose
@@ -967,8 +986,9 @@ Editor-only
     class_editorresourcetooltipplugin
     class_editorsceneformatimporter
     class_editorsceneformatimporterblend
-    class_editorsceneformatimporterfbx
+    class_editorsceneformatimporterfbx2gltf
     class_editorsceneformatimportergltf
+    class_editorsceneformatimporterufbx
     class_editorscenepostimport
     class_editorscenepostimportplugin
     class_editorscript
