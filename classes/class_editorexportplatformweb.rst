@@ -155,9 +155,9 @@ For more information, see the :doc:`Customizing HTML5 Shell <../tutorials/platfo
 
 :ref:`bool<class_bool>` **html/experimental_virtual_keyboard**
 
-If ``true``, embeds support for a virtual keyboard into the web page, which is shown when necessary on touchscreen devices.
+**Experimental:** This property may be changed or removed in future versions.
 
-\ **Warning:** This feature is experimental and may be changed in a future release.
+If ``true``, embeds support for a virtual keyboard into the web page, which is shown when necessary on touchscreen devices.
 
 .. rst-class:: classref-item-separator
 
@@ -349,9 +349,9 @@ If ``true`` enables :ref:`GDExtension<class_GDExtension>` support for this web b
 
 :ref:`bool<class_bool>` **variant/thread_support**
 
-If enabled, the exported game will support threads. It requires `a "cross-origin isolated" website <https://web.dev/articles/coop-coep>`__, which can be difficult to setup and brings some limitations (e.g. not being able to communicate with third-party websites).
+If ``true``, the exported game will support threads. It requires `a "cross-origin isolated" website <https://web.dev/articles/coop-coep>`__, which may be difficult to set up and is limited for security reasons (such as not being able to communicate with third-party websites).
 
-If disabled, the exported game will not support threads. As a result, it is more prone to performance and audio issues, but will only require to be run on a HTTPS website.
+If ``false``, the exported game will not support threads. As a result, it is more prone to performance and audio issues, but will only require to be run on a HTTPS website.
 
 .. rst-class:: classref-item-separator
 
@@ -384,3 +384,4 @@ If ``true`` allows textures to be optimized for mobile through the ETC2 algorith
 .. |static| replace:: :abbr:`static (This method doesn't need an instance to be called, so it can be called directly using the class name.)`
 .. |operator| replace:: :abbr:`operator (This method describes a valid operator to use with this type as left-hand operand.)`
 .. |bitfield| replace:: :abbr:`BitField (This value is an integer composed as a bitmask of the following flags.)`
+.. |void| replace:: :abbr:`void (No return value.)`
