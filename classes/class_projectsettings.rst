@@ -475,6 +475,8 @@ Properties
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
    | :ref:`int<class_int>`                             | :ref:`editor/naming/scene_name_casing<class_ProjectSettings_property_editor/naming/scene_name_casing>`                                                                                                     | ``2``                                                                                            |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
+   | :ref:`int<class_int>`                             | :ref:`editor/naming/script_name_casing<class_ProjectSettings_property_editor/naming/script_name_casing>`                                                                                                   | ``0``                                                                                            |
+   +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
    | :ref:`String<class_String>`                       | :ref:`editor/run/main_run_args<class_ProjectSettings_property_editor/run/main_run_args>`                                                                                                                   | ``""``                                                                                           |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
    | :ref:`PackedStringArray<class_PackedStringArray>` | :ref:`editor/script/search_in_file_extensions<class_ProjectSettings_property_editor/script/search_in_file_extensions>`                                                                                     | ``PackedStringArray("gd", "gdshader")``                                                          |
@@ -491,11 +493,11 @@ Properties
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                           | :ref:`filesystem/import/blender/enabled.web<class_ProjectSettings_property_filesystem/import/blender/enabled.web>`                                                                                         | ``false``                                                                                        |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-   | :ref:`bool<class_bool>`                           | :ref:`filesystem/import/fbx/enabled<class_ProjectSettings_property_filesystem/import/fbx/enabled>`                                                                                                         | ``true``                                                                                         |
+   | :ref:`bool<class_bool>`                           | :ref:`filesystem/import/fbx2gltf/enabled<class_ProjectSettings_property_filesystem/import/fbx2gltf/enabled>`                                                                                               | ``true``                                                                                         |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-   | :ref:`bool<class_bool>`                           | :ref:`filesystem/import/fbx/enabled.android<class_ProjectSettings_property_filesystem/import/fbx/enabled.android>`                                                                                         | ``false``                                                                                        |
+   | :ref:`bool<class_bool>`                           | :ref:`filesystem/import/fbx2gltf/enabled.android<class_ProjectSettings_property_filesystem/import/fbx2gltf/enabled.android>`                                                                               | ``false``                                                                                        |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-   | :ref:`bool<class_bool>`                           | :ref:`filesystem/import/fbx/enabled.web<class_ProjectSettings_property_filesystem/import/fbx/enabled.web>`                                                                                                 | ``false``                                                                                        |
+   | :ref:`bool<class_bool>`                           | :ref:`filesystem/import/fbx2gltf/enabled.web<class_ProjectSettings_property_filesystem/import/fbx2gltf/enabled.web>`                                                                                       | ``false``                                                                                        |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
    | :ref:`int<class_int>`                             | :ref:`gui/common/default_scroll_deadzone<class_ProjectSettings_property_gui/common/default_scroll_deadzone>`                                                                                               | ``0``                                                                                            |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
@@ -676,6 +678,8 @@ Properties
    | :ref:`Dictionary<class_Dictionary>`               | :ref:`input/ui_text_select_word_under_caret<class_ProjectSettings_property_input/ui_text_select_word_under_caret>`                                                                                         |                                                                                                  |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
    | :ref:`Dictionary<class_Dictionary>`               | :ref:`input/ui_text_select_word_under_caret.macos<class_ProjectSettings_property_input/ui_text_select_word_under_caret.macos>`                                                                             |                                                                                                  |
+   +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
+   | :ref:`Dictionary<class_Dictionary>`               | :ref:`input/ui_text_skip_selection_for_next_occurrence<class_ProjectSettings_property_input/ui_text_skip_selection_for_next_occurrence>`                                                                   |                                                                                                  |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
    | :ref:`Dictionary<class_Dictionary>`               | :ref:`input/ui_text_submit<class_ProjectSettings_property_input/ui_text_submit>`                                                                                                                           |                                                                                                  |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
@@ -1165,6 +1169,8 @@ Properties
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                           | :ref:`navigation/baking/thread_model/baking_use_multiple_threads<class_ProjectSettings_property_navigation/baking/thread_model/baking_use_multiple_threads>`                                               | ``true``                                                                                         |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`                           | :ref:`navigation/baking/use_crash_prevention_checks<class_ProjectSettings_property_navigation/baking/use_crash_prevention_checks>`                                                                         | ``true``                                                                                         |
+   +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
    | :ref:`int<class_int>`                             | :ref:`network/limits/debugger/max_chars_per_second<class_ProjectSettings_property_network/limits/debugger/max_chars_per_second>`                                                                           | ``32768``                                                                                        |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
    | :ref:`int<class_int>`                             | :ref:`network/limits/debugger/max_errors_per_second<class_ProjectSettings_property_network/limits/debugger/max_errors_per_second>`                                                                         | ``400``                                                                                          |
@@ -1242,6 +1248,8 @@ Properties
    | :ref:`bool<class_bool>`                           | :ref:`physics/common/enable_object_picking<class_ProjectSettings_property_physics/common/enable_object_picking>`                                                                                           | ``true``                                                                                         |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
    | :ref:`int<class_int>`                             | :ref:`physics/common/max_physics_steps_per_frame<class_ProjectSettings_property_physics/common/max_physics_steps_per_frame>`                                                                               | ``8``                                                                                            |
+   +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`                           | :ref:`physics/common/physics_interpolation<class_ProjectSettings_property_physics/common/physics_interpolation>`                                                                                           | ``false``                                                                                        |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
    | :ref:`float<class_float>`                         | :ref:`physics/common/physics_jitter_fix<class_ProjectSettings_property_physics/common/physics_jitter_fix>`                                                                                                 | ``0.5``                                                                                          |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+
@@ -1604,43 +1612,43 @@ Methods
 .. table::
    :widths: auto
 
-   +---------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | void                                  | :ref:`add_property_info<class_ProjectSettings_method_add_property_info>` **(** :ref:`Dictionary<class_Dictionary>` hint **)**                                                                       |
-   +---------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | void                                  | :ref:`clear<class_ProjectSettings_method_clear>` **(** :ref:`String<class_String>` name **)**                                                                                                       |
-   +---------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`Dictionary[]<class_Dictionary>` | :ref:`get_global_class_list<class_ProjectSettings_method_get_global_class_list>` **(** **)**                                                                                                        |
-   +---------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`int<class_int>`                 | :ref:`get_order<class_ProjectSettings_method_get_order>` **(** :ref:`String<class_String>` name **)** |const|                                                                                       |
-   +---------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`Variant<class_Variant>`         | :ref:`get_setting<class_ProjectSettings_method_get_setting>` **(** :ref:`String<class_String>` name, :ref:`Variant<class_Variant>` default_value=null **)** |const|                                 |
-   +---------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`Variant<class_Variant>`         | :ref:`get_setting_with_override<class_ProjectSettings_method_get_setting_with_override>` **(** :ref:`StringName<class_StringName>` name **)** |const|                                               |
-   +---------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>`           | :ref:`globalize_path<class_ProjectSettings_method_globalize_path>` **(** :ref:`String<class_String>` path **)** |const|                                                                             |
-   +---------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`bool<class_bool>`               | :ref:`has_setting<class_ProjectSettings_method_has_setting>` **(** :ref:`String<class_String>` name **)** |const|                                                                                   |
-   +---------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`bool<class_bool>`               | :ref:`load_resource_pack<class_ProjectSettings_method_load_resource_pack>` **(** :ref:`String<class_String>` pack, :ref:`bool<class_bool>` replace_files=true, :ref:`int<class_int>` offset=0 **)** |
-   +---------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>`           | :ref:`localize_path<class_ProjectSettings_method_localize_path>` **(** :ref:`String<class_String>` path **)** |const|                                                                               |
-   +---------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`Error<enum_@GlobalScope_Error>` | :ref:`save<class_ProjectSettings_method_save>` **(** **)**                                                                                                                                          |
-   +---------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`Error<enum_@GlobalScope_Error>` | :ref:`save_custom<class_ProjectSettings_method_save_custom>` **(** :ref:`String<class_String>` file **)**                                                                                           |
-   +---------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | void                                  | :ref:`set_as_basic<class_ProjectSettings_method_set_as_basic>` **(** :ref:`String<class_String>` name, :ref:`bool<class_bool>` basic **)**                                                          |
-   +---------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | void                                  | :ref:`set_as_internal<class_ProjectSettings_method_set_as_internal>` **(** :ref:`String<class_String>` name, :ref:`bool<class_bool>` internal **)**                                                 |
-   +---------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | void                                  | :ref:`set_initial_value<class_ProjectSettings_method_set_initial_value>` **(** :ref:`String<class_String>` name, :ref:`Variant<class_Variant>` value **)**                                          |
-   +---------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | void                                  | :ref:`set_order<class_ProjectSettings_method_set_order>` **(** :ref:`String<class_String>` name, :ref:`int<class_int>` position **)**                                                               |
-   +---------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | void                                  | :ref:`set_restart_if_changed<class_ProjectSettings_method_set_restart_if_changed>` **(** :ref:`String<class_String>` name, :ref:`bool<class_bool>` restart **)**                                    |
-   +---------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | void                                  | :ref:`set_setting<class_ProjectSettings_method_set_setting>` **(** :ref:`String<class_String>` name, :ref:`Variant<class_Variant>` value **)**                                                      |
-   +---------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                                                           | :ref:`add_property_info<class_ProjectSettings_method_add_property_info>`\ (\ hint\: :ref:`Dictionary<class_Dictionary>`\ )                                                                               |
+   +------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                                                           | :ref:`clear<class_ProjectSettings_method_clear>`\ (\ name\: :ref:`String<class_String>`\ )                                                                                                               |
+   +------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Array<class_Array>`\[:ref:`Dictionary<class_Dictionary>`\] | :ref:`get_global_class_list<class_ProjectSettings_method_get_global_class_list>`\ (\ )                                                                                                                   |
+   +------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`int<class_int>`                                            | :ref:`get_order<class_ProjectSettings_method_get_order>`\ (\ name\: :ref:`String<class_String>`\ ) |const|                                                                                               |
+   +------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Variant<class_Variant>`                                    | :ref:`get_setting<class_ProjectSettings_method_get_setting>`\ (\ name\: :ref:`String<class_String>`, default_value\: :ref:`Variant<class_Variant>` = null\ ) |const|                                     |
+   +------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Variant<class_Variant>`                                    | :ref:`get_setting_with_override<class_ProjectSettings_method_get_setting_with_override>`\ (\ name\: :ref:`StringName<class_StringName>`\ ) |const|                                                       |
+   +------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                                      | :ref:`globalize_path<class_ProjectSettings_method_globalize_path>`\ (\ path\: :ref:`String<class_String>`\ ) |const|                                                                                     |
+   +------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`                                          | :ref:`has_setting<class_ProjectSettings_method_has_setting>`\ (\ name\: :ref:`String<class_String>`\ ) |const|                                                                                           |
+   +------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`                                          | :ref:`load_resource_pack<class_ProjectSettings_method_load_resource_pack>`\ (\ pack\: :ref:`String<class_String>`, replace_files\: :ref:`bool<class_bool>` = true, offset\: :ref:`int<class_int>` = 0\ ) |
+   +------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                                      | :ref:`localize_path<class_ProjectSettings_method_localize_path>`\ (\ path\: :ref:`String<class_String>`\ ) |const|                                                                                       |
+   +------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Error<enum_@GlobalScope_Error>`                            | :ref:`save<class_ProjectSettings_method_save>`\ (\ )                                                                                                                                                     |
+   +------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Error<enum_@GlobalScope_Error>`                            | :ref:`save_custom<class_ProjectSettings_method_save_custom>`\ (\ file\: :ref:`String<class_String>`\ )                                                                                                   |
+   +------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                                                           | :ref:`set_as_basic<class_ProjectSettings_method_set_as_basic>`\ (\ name\: :ref:`String<class_String>`, basic\: :ref:`bool<class_bool>`\ )                                                                |
+   +------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                                                           | :ref:`set_as_internal<class_ProjectSettings_method_set_as_internal>`\ (\ name\: :ref:`String<class_String>`, internal\: :ref:`bool<class_bool>`\ )                                                       |
+   +------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                                                           | :ref:`set_initial_value<class_ProjectSettings_method_set_initial_value>`\ (\ name\: :ref:`String<class_String>`, value\: :ref:`Variant<class_Variant>`\ )                                                |
+   +------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                                                           | :ref:`set_order<class_ProjectSettings_method_set_order>`\ (\ name\: :ref:`String<class_String>`, position\: :ref:`int<class_int>`\ )                                                                     |
+   +------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                                                           | :ref:`set_restart_if_changed<class_ProjectSettings_method_set_restart_if_changed>`\ (\ name\: :ref:`String<class_String>`, restart\: :ref:`bool<class_bool>`\ )                                          |
+   +------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                                                           | :ref:`set_setting<class_ProjectSettings_method_set_setting>`\ (\ name\: :ref:`String<class_String>`, value\: :ref:`Variant<class_Variant>`\ )                                                            |
+   +------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. rst-class:: classref-section-separator
 
@@ -1655,7 +1663,7 @@ Signals
 
 .. rst-class:: classref-signal
 
-**settings_changed** **(** **)**
+**settings_changed**\ (\ )
 
 Emitted when any setting is changed, up to once per process frame.
 
@@ -2088,7 +2096,7 @@ Limiting the FPS can be useful to reduce system power consumption, which reduces
 
 If :ref:`display/window/vsync/vsync_mode<class_ProjectSettings_property_display/window/vsync/vsync_mode>` is set to ``Enabled`` or ``Adaptive``, it takes precedence and the forced FPS number cannot exceed the monitor's refresh rate.
 
-If :ref:`display/window/vsync/vsync_mode<class_ProjectSettings_property_display/window/vsync/vsync_mode>` is ``Enabled``, on monitors with variable refresh rate enabled (G-Sync/FreeSync), using a FPS limit a few frames lower than the monitor's refresh rate will `reduce input lag while avoiding tearing <https://blurbusters.com/howto-low-lag-vsync-on/>`__.
+If :ref:`display/window/vsync/vsync_mode<class_ProjectSettings_property_display/window/vsync/vsync_mode>` is ``Enabled``, on monitors with variable refresh rate enabled (G-Sync/FreeSync), using an FPS limit a few frames lower than the monitor's refresh rate will `reduce input lag while avoiding tearing <https://blurbusters.com/howto-low-lag-vsync-on/>`__.
 
 If :ref:`display/window/vsync/vsync_mode<class_ProjectSettings_property_display/window/vsync/vsync_mode>` is ``Disabled``, limiting the FPS to a high value that can be consistently reached on the system can reduce input lag compared to an uncapped framerate. Since this works by ensuring the GPU load is lower than 100%, this latency reduction is only effective in GPU-bottlenecked scenarios, not CPU-bottlenecked scenarios.
 
@@ -2528,6 +2536,8 @@ When set to ``warn`` or ``error``, produces a warning or an error respectively w
 
 :ref:`int<class_int>` **debug/gdscript/warnings/constant_used_as_function** = ``1``
 
+**Deprecated:** This warning is never produced. Instead, an error is generated if the expression type is known at compile time.
+
 When set to ``warn`` or ``error``, produces a warning or an error respectively when a constant is used as a function.
 
 .. rst-class:: classref-item-separator
@@ -2541,6 +2551,8 @@ When set to ``warn`` or ``error``, produces a warning or an error respectively w
 :ref:`int<class_int>` **debug/gdscript/warnings/deprecated_keyword** = ``1``
 
 When set to ``warn`` or ``error``, produces a warning or an error respectively when deprecated keywords are used.
+
+\ **Note:** There are currently no deprecated keywords, so this warning is never produced.
 
 .. rst-class:: classref-item-separator
 
@@ -2587,6 +2599,8 @@ If ``true``, scripts in the ``res://addons`` folder will not generate warnings.
 .. rst-class:: classref-property
 
 :ref:`int<class_int>` **debug/gdscript/warnings/function_used_as_property** = ``1``
+
+**Deprecated:** This warning is never produced. When a function is used as a property, a :ref:`Callable<class_Callable>` is returned.
 
 When set to ``warn`` or ``error``, produces a warning or an error respectively when using a function as if it is a property.
 
@@ -2722,6 +2736,8 @@ When set to ``warn`` or ``error``, produces a warning or an error respectively w
 
 :ref:`int<class_int>` **debug/gdscript/warnings/property_used_as_function** = ``1``
 
+**Deprecated:** This warning is never produced. Instead, an error is generated if the expression type is known at compile time.
+
 When set to ``warn`` or ``error``, produces a warning or an error respectively when using a property as if it is a function.
 
 .. rst-class:: classref-item-separator
@@ -2770,7 +2786,7 @@ When enabled, using a property, enum, or function that was renamed since Godot 3
 
 :ref:`int<class_int>` **debug/gdscript/warnings/return_value_discarded** = ``0``
 
-When set to ``warn`` or ``error``, produces a warning or an error respectively when calling a function without using its return value (by assigning it to a variable or using it as a function argument). Such return values are sometimes used to denote possible errors using the :ref:`Error<enum_@GlobalScope_Error>` enum.
+When set to ``warn`` or ``error``, produces a warning or an error respectively when calling a function without using its return value (by assigning it to a variable or using it as a function argument). These return values are sometimes used to indicate possible errors using the :ref:`Error<enum_@GlobalScope_Error>` enum.
 
 .. rst-class:: classref-item-separator
 
@@ -3012,7 +3028,7 @@ When set to ``warn`` or ``error``, produces a warning or an error respectively w
 
 :ref:`int<class_int>` **debug/gdscript/warnings/unused_signal** = ``1``
 
-When set to ``warn`` or ``error``, produces a warning or an error respectively when a signal is declared but never emitted.
+When set to ``warn`` or ``error``, produces a warning or an error respectively when a signal is declared but never explicitly used in the class.
 
 .. rst-class:: classref-item-separator
 
@@ -3144,7 +3160,7 @@ If ``true``, enables specific shader warnings (see ``debug/shader_language/warni
 
 :ref:`bool<class_bool>` **debug/shader_language/warnings/float_comparison** = ``true``
 
-When set to ``true``, produces a warning when two floating point numbers are compared directly with the ``==`` operator or the ``!=`` operator.
+When set to ``true``, produces a warning when two floating-point numbers are compared directly with the ``==`` operator or the ``!=`` operator.
 
 .. rst-class:: classref-item-separator
 
@@ -4366,7 +4382,7 @@ The format of the default signal callback name when a signal connects to the sam
 
 :ref:`int<class_int>` **editor/naming/node_name_casing** = ``0``
 
-When creating node names automatically, set the type of casing in this project. This is mostly an editor setting.
+When creating node names automatically, set the type of casing to use in this project. This is mostly an editor setting.
 
 .. rst-class:: classref-item-separator
 
@@ -4390,7 +4406,19 @@ What to use to separate node name from number. This is mostly an editor setting.
 
 :ref:`int<class_int>` **editor/naming/scene_name_casing** = ``2``
 
-When generating file names from scene root node, set the type of casing in this project. This is mostly an editor setting.
+When generating scene file names from scene root node, set the type of casing to use in this project. This is mostly an editor setting.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ProjectSettings_property_editor/naming/script_name_casing:
+
+.. rst-class:: classref-property
+
+:ref:`int<class_int>` **editor/naming/script_name_casing** = ``0``
+
+When generating script file names from the selected node, set the type of casing to use in this project. This is mostly an editor setting.
 
 .. rst-class:: classref-item-separator
 
@@ -4406,7 +4434,7 @@ The command-line arguments to append to Godot's own command line when running th
 
 It is possible to make another executable run Godot by using the ``%command%`` placeholder. The placeholder will be replaced with Godot's own command line. Program-specific arguments should be placed *before* the placeholder, whereas Godot-specific arguments should be placed *after* the placeholder.
 
-For example, this can be used to force the project to run on the dedicated GPU in a NVIDIA Optimus system on Linux:
+For example, this can be used to force the project to run on the dedicated GPU in an NVIDIA Optimus system on Linux:
 
 ::
 
@@ -4506,39 +4534,39 @@ Override for :ref:`filesystem/import/blender/enabled<class_ProjectSettings_prope
 
 ----
 
-.. _class_ProjectSettings_property_filesystem/import/fbx/enabled:
+.. _class_ProjectSettings_property_filesystem/import/fbx2gltf/enabled:
 
 .. rst-class:: classref-property
 
-:ref:`bool<class_bool>` **filesystem/import/fbx/enabled** = ``true``
+:ref:`bool<class_bool>` **filesystem/import/fbx2gltf/enabled** = ``true``
 
 If ``true``, Autodesk FBX 3D scene files with the ``.fbx`` extension will be imported by converting them to glTF 2.0.
 
-This requires configuring a path to a FBX2glTF executable in the editor settings at ``filesystem/import/fbx/fbx2gltf_path``.
+This requires configuring a path to an FBX2glTF executable in the editor settings at :ref:`EditorSettings.filesystem/import/fbx2gltf/fbx2gltf_path<class_EditorSettings_property_filesystem/import/fbx2gltf/fbx2gltf_path>`.
 
 .. rst-class:: classref-item-separator
 
 ----
 
-.. _class_ProjectSettings_property_filesystem/import/fbx/enabled.android:
+.. _class_ProjectSettings_property_filesystem/import/fbx2gltf/enabled.android:
 
 .. rst-class:: classref-property
 
-:ref:`bool<class_bool>` **filesystem/import/fbx/enabled.android** = ``false``
+:ref:`bool<class_bool>` **filesystem/import/fbx2gltf/enabled.android** = ``false``
 
-Override for :ref:`filesystem/import/fbx/enabled<class_ProjectSettings_property_filesystem/import/fbx/enabled>` on Android where FBX2glTF can't easily be accessed from Godot.
+Override for :ref:`filesystem/import/fbx2gltf/enabled<class_ProjectSettings_property_filesystem/import/fbx2gltf/enabled>` on Android where FBX2glTF can't easily be accessed from Godot.
 
 .. rst-class:: classref-item-separator
 
 ----
 
-.. _class_ProjectSettings_property_filesystem/import/fbx/enabled.web:
+.. _class_ProjectSettings_property_filesystem/import/fbx2gltf/enabled.web:
 
 .. rst-class:: classref-property
 
-:ref:`bool<class_bool>` **filesystem/import/fbx/enabled.web** = ``false``
+:ref:`bool<class_bool>` **filesystem/import/fbx2gltf/enabled.web** = ``false``
 
-Override for :ref:`filesystem/import/fbx/enabled<class_ProjectSettings_property_filesystem/import/fbx/enabled>` on the Web where FBX2glTF can't easily be accessed from Godot.
+Override for :ref:`filesystem/import/fbx2gltf/enabled<class_ProjectSettings_property_filesystem/import/fbx2gltf/enabled>` on the Web where FBX2glTF can't easily be accessed from Godot.
 
 .. rst-class:: classref-item-separator
 
@@ -5760,6 +5788,24 @@ macOS specific override for the shortcut to select the word currently under the 
 
 ----
 
+.. _class_ProjectSettings_property_input/ui_text_skip_selection_for_next_occurrence:
+
+.. rst-class:: classref-property
+
+:ref:`Dictionary<class_Dictionary>` **input/ui_text_skip_selection_for_next_occurrence**
+
+If no selection is currently active with the last caret in text fields, searches for the next occurrence of the the word currently under the caret and moves the caret to the next occurrence. The action can be performed sequentially for other occurrences of the word under the last caret.
+
+If a selection is currently active with the last caret in text fields, searches for the next occurrence of the selection, adds a caret, selects the next occurrence then deselects the previous selection and its associated caret. The action can be performed sequentially for other occurrences of the selection of the last caret.
+
+The viewport is adjusted to the latest newly added caret.
+
+\ **Note:** Default ``ui_*`` actions cannot be removed as they are necessary for the internal logic of several :ref:`Control<class_Control>`\ s. The events assigned to the action can however be modified.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_ProjectSettings_property_input/ui_text_submit:
 
 .. rst-class:: classref-property
@@ -6118,7 +6164,7 @@ Root node default layout direction.
 
 Specifies the :ref:`TextServer<class_TextServer>` to use. If left empty, the default will be used.
 
-"ICU / HarfBuzz / Graphite" is the most advanced text driver, supporting right-to-left typesetting and complex scripts (for languages like Arabic, Hebrew, etc). The "Fallback" text driver does not support right-to-left typesetting and complex scripts.
+"ICU / HarfBuzz / Graphite" is the most advanced text driver, supporting right-to-left typesetting and complex scripts (for languages like Arabic, Hebrew, etc.). The "Fallback" text driver does not support right-to-left typesetting and complex scripts.
 
 \ **Note:** The driver in use can be overridden at runtime via the ``--text-driver`` :doc:`command line argument <../tutorials/editor/command_line_tutorial>`.
 
@@ -8720,6 +8766,18 @@ If enabled the async navmesh baking uses multiple threads.
 
 ----
 
+.. _class_ProjectSettings_property_navigation/baking/use_crash_prevention_checks:
+
+.. rst-class:: classref-property
+
+:ref:`bool<class_bool>` **navigation/baking/use_crash_prevention_checks** = ``true``
+
+If enabled, and baking would potentially lead to an engine crash, the baking will be interrupted and an error message with explanation will be raised.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_ProjectSettings_property_network/limits/debugger/max_chars_per_second:
 
 .. rst-class:: classref-property
@@ -9302,6 +9360,24 @@ Controls the maximum number of physics steps that can be simulated each rendered
 
 ----
 
+.. _class_ProjectSettings_property_physics/common/physics_interpolation:
+
+.. rst-class:: classref-property
+
+:ref:`bool<class_bool>` **physics/common/physics_interpolation** = ``false``
+
+If ``true``, the renderer will interpolate the transforms of physics objects between the last two transforms, so that smooth motion is seen even when physics ticks do not coincide with rendered frames. See also :ref:`Node.physics_interpolation_mode<class_Node_property_physics_interpolation_mode>` and :ref:`Node.reset_physics_interpolation<class_Node_method_reset_physics_interpolation>`.
+
+\ **Note:** If ``true``, the physics jitter fix should be disabled by setting :ref:`physics/common/physics_jitter_fix<class_ProjectSettings_property_physics/common/physics_jitter_fix>` to ``0.0``.
+
+\ **Note:** This property is only read when the project starts. To toggle physics interpolation at runtime, set :ref:`SceneTree.physics_interpolation<class_SceneTree_property_physics_interpolation>` instead.
+
+\ **Note:** This feature is currently only implemented in the 2D renderer.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_ProjectSettings_property_physics/common/physics_jitter_fix:
 
 .. rst-class:: classref-property
@@ -9310,7 +9386,7 @@ Controls the maximum number of physics steps that can be simulated each rendered
 
 Controls how much physics ticks are synchronized with real time. For 0 or less, the ticks are synchronized. Such values are recommended for network games, where clock synchronization matters. Higher values cause higher deviation of in-game clock and real clock, but allows smoothing out framerate jitters. The default value of 0.5 should be good enough for most; values above 2 could cause the game to react to dropped frames with a noticeable delay and are not recommended.
 
-\ **Note:** For best results, when using a custom physics interpolation solution, the physics jitter fix should be disabled by setting :ref:`physics/common/physics_jitter_fix<class_ProjectSettings_property_physics/common/physics_jitter_fix>` to ``0``.
+\ **Note:** When using a physics interpolation solution (such as enabling :ref:`physics/common/physics_interpolation<class_ProjectSettings_property_physics/common/physics_interpolation>` or using a custom solution), the physics jitter fix should be disabled by setting :ref:`physics/common/physics_jitter_fix<class_ProjectSettings_property_physics/common/physics_jitter_fix>` to ``0.0``.
 
 \ **Note:** This property is only read when the project starts. To change the physics jitter fix at runtime, set :ref:`Engine.physics_jitter_fix<class_Engine_property_physics_jitter_fix>` instead.
 
@@ -9384,11 +9460,13 @@ The size of the 2D shadow atlas in pixels. Higher values result in more precise 
 
 :ref:`bool<class_bool>` **rendering/2d/snap/snap_2d_transforms_to_pixel** = ``false``
 
-If ``true``, :ref:`CanvasItem<class_CanvasItem>` nodes will internally snap to full pixels. Their position can still be sub-pixel, but the decimals will not have effect. This can lead to a crisper appearance at the cost of less smooth movement, especially when :ref:`Camera2D<class_Camera2D>` smoothing is enabled.
+If ``true``, :ref:`CanvasItem<class_CanvasItem>` nodes will internally snap to full pixels. Useful for low-resolution pixel art games. Their position can still be sub-pixel, but the decimals will not have effect as the position is rounded. This can lead to a crisper appearance at the cost of less smooth movement, especially when :ref:`Camera2D<class_Camera2D>` smoothing is enabled.
 
 \ **Note:** This property is only read when the project starts. To toggle 2D transform snapping at runtime, use :ref:`RenderingServer.viewport_set_snap_2d_transforms_to_pixel<class_RenderingServer_method_viewport_set_snap_2d_transforms_to_pixel>` on the root :ref:`Viewport<class_Viewport>` instead.
 
 \ **Note:** :ref:`Control<class_Control>` nodes are snapped to the nearest pixel by default. This is controlled by :ref:`gui/common/snap_controls_to_pixels<class_ProjectSettings_property_gui/common/snap_controls_to_pixels>`.
+
+\ **Note:** It is not recommended to use this setting together with :ref:`rendering/2d/snap/snap_2d_vertices_to_pixel<class_ProjectSettings_property_rendering/2d/snap/snap_2d_vertices_to_pixel>`, as movement may appear even less smooth. Prefer only enabling this setting instead.
 
 .. rst-class:: classref-item-separator
 
@@ -9400,11 +9478,13 @@ If ``true``, :ref:`CanvasItem<class_CanvasItem>` nodes will internally snap to f
 
 :ref:`bool<class_bool>` **rendering/2d/snap/snap_2d_vertices_to_pixel** = ``false``
 
-If ``true``, vertices of :ref:`CanvasItem<class_CanvasItem>` nodes will snap to full pixels. Only affects the final vertex positions, not the transforms. This can lead to a crisper appearance at the cost of less smooth movement, especially when :ref:`Camera2D<class_Camera2D>` smoothing is enabled.
+If ``true``, vertices of :ref:`CanvasItem<class_CanvasItem>` nodes will snap to full pixels. Useful for low-resolution pixel art games. Only affects the final vertex positions, not the transforms. This can lead to a crisper appearance at the cost of less smooth movement, especially when :ref:`Camera2D<class_Camera2D>` smoothing is enabled.
 
 \ **Note:** This property is only read when the project starts. To toggle 2D vertex snapping at runtime, use :ref:`RenderingServer.viewport_set_snap_2d_vertices_to_pixel<class_RenderingServer_method_viewport_set_snap_2d_vertices_to_pixel>` on the root :ref:`Viewport<class_Viewport>` instead.
 
 \ **Note:** :ref:`Control<class_Control>` nodes are snapped to the nearest pixel by default. This is controlled by :ref:`gui/common/snap_controls_to_pixels<class_ProjectSettings_property_gui/common/snap_controls_to_pixels>`.
+
+\ **Note:** It is not recommended to use this setting together with :ref:`rendering/2d/snap/snap_2d_transforms_to_pixel<class_ProjectSettings_property_rendering/2d/snap/snap_2d_transforms_to_pixel>`, as movement may appear even less smooth. Prefer only enabling that setting instead.
 
 .. rst-class:: classref-item-separator
 
@@ -9594,9 +9674,9 @@ If ``true``, performs a previous depth pass before rendering 3D materials. This 
 
 :ref:`int<class_int>` **rendering/driver/threads/thread_model** = ``1``
 
-The thread model to use for rendering. Rendering on a thread may improve performance, but synchronizing to the main thread can cause a bit more jitter.
+**Experimental:** This setting has several known bugs which can lead to crashing, especially when using particles or resizing the window. Not recommended for use in production at this stage.
 
-\ **Note:** The **Multi-Threaded** option is experimental, and has several known bugs which can lead to crashing, especially when using particles or resizing the window. Not recommended for use in production at this stage.
+The thread model to use for rendering. Rendering on a thread may improve performance, but synchronizing to the main thread can cause a bit more jitter.
 
 .. rst-class:: classref-item-separator
 
@@ -11228,6 +11308,8 @@ Lower-end override for :ref:`rendering/shading/overrides/force_vertex_shading<cl
 
 The default texture filtering mode to use on :ref:`CanvasItem<class_CanvasItem>`\ s.
 
+\ **Note:** For pixel art aesthetics, see also :ref:`rendering/2d/snap/snap_2d_vertices_to_pixel<class_ProjectSettings_property_rendering/2d/snap/snap_2d_vertices_to_pixel>` and :ref:`rendering/2d/snap/snap_2d_transforms_to_pixel<class_ProjectSettings_property_rendering/2d/snap/snap_2d_transforms_to_pixel>`.
+
 .. rst-class:: classref-item-separator
 
 ----
@@ -11334,7 +11416,7 @@ If ``true``, the texture importer will import lossless textures using the PNG fo
 
 :ref:`bool<class_bool>` **rendering/textures/vram_compression/import_etc2_astc** = ``false``
 
-If ``true``, the texture importer will import VRAM-compressed textures using the Ericsson Texture Compression 2 algorithm for lower quality textures and normal maps and Adaptable Scalable Texture Compression algorithm for high quality textures (in 4x4 block size).
+If ``true``, the texture importer will import VRAM-compressed textures using the Ericsson Texture Compression 2 algorithm for lower quality textures and normal maps and Adaptable Scalable Texture Compression algorithm for high quality textures (in 4×4 block size).
 
 \ **Note:** This setting is an override. The texture importer will always import the format the host platform needs, even if this is set to ``false``.
 
@@ -11432,16 +11514,16 @@ The texture *must* use a lossless compression format so that colors can be match
 
 ::
 
-    - 1x1 = rgb(0, 0, 0)     - #000000
-    - 1x2 = rgb(0, 85, 0)    - #005500
-    - 2x1 = rgb(85, 0, 0)    - #550000
-    - 2x2 = rgb(85, 85, 0)   - #555500
-    - 2x4 = rgb(85, 170, 0)  - #55aa00
-    - 4x2 = rgb(170, 85, 0)  - #aa5500
-    - 4x4 = rgb(170, 170, 0) - #aaaa00
-    - 4x8 = rgb(170, 255, 0) - #aaff00 - Not supported on most hardware
-    - 8x4 = rgb(255, 170, 0) - #ffaa00 - Not supported on most hardware
-    - 8x8 = rgb(255, 255, 0) - #ffff00 - Not supported on most hardware
+    - 1×1 = rgb(0, 0, 0)     - #000000
+    - 1×2 = rgb(0, 85, 0)    - #005500
+    - 2×1 = rgb(85, 0, 0)    - #550000
+    - 2×2 = rgb(85, 85, 0)   - #555500
+    - 2×4 = rgb(85, 170, 0)  - #55aa00
+    - 4×2 = rgb(170, 85, 0)  - #aa5500
+    - 4×4 = rgb(170, 170, 0) - #aaaa00
+    - 4×8 = rgb(170, 255, 0) - #aaff00 - Not supported on most hardware
+    - 8×4 = rgb(255, 170, 0) - #ffaa00 - Not supported on most hardware
+    - 8×8 = rgb(255, 255, 0) - #ffff00 - Not supported on most hardware
 
 .. rst-class:: classref-item-separator
 
@@ -11640,7 +11722,7 @@ Method Descriptions
 
 .. rst-class:: classref-method
 
-void **add_property_info** **(** :ref:`Dictionary<class_Dictionary>` hint **)**
+|void| **add_property_info**\ (\ hint\: :ref:`Dictionary<class_Dictionary>`\ )
 
 Adds a custom property info to a property. The dictionary must contain:
 
@@ -11692,7 +11774,7 @@ Adds a custom property info to a property. The dictionary must contain:
 
 .. rst-class:: classref-method
 
-void **clear** **(** :ref:`String<class_String>` name **)**
+|void| **clear**\ (\ name\: :ref:`String<class_String>`\ )
 
 Clears the whole configuration (not recommended, may break things).
 
@@ -11704,7 +11786,7 @@ Clears the whole configuration (not recommended, may break things).
 
 .. rst-class:: classref-method
 
-:ref:`Dictionary[]<class_Dictionary>` **get_global_class_list** **(** **)**
+:ref:`Array<class_Array>`\[:ref:`Dictionary<class_Dictionary>`\] **get_global_class_list**\ (\ )
 
 Returns an :ref:`Array<class_Array>` of registered global classes. Each global class is represented as a :ref:`Dictionary<class_Dictionary>` that contains the following entries:
 
@@ -11728,7 +11810,7 @@ Returns an :ref:`Array<class_Array>` of registered global classes. Each global c
 
 .. rst-class:: classref-method
 
-:ref:`int<class_int>` **get_order** **(** :ref:`String<class_String>` name **)** |const|
+:ref:`int<class_int>` **get_order**\ (\ name\: :ref:`String<class_String>`\ ) |const|
 
 Returns the order of a configuration value (influences when saved to the config file).
 
@@ -11740,7 +11822,7 @@ Returns the order of a configuration value (influences when saved to the config 
 
 .. rst-class:: classref-method
 
-:ref:`Variant<class_Variant>` **get_setting** **(** :ref:`String<class_String>` name, :ref:`Variant<class_Variant>` default_value=null **)** |const|
+:ref:`Variant<class_Variant>` **get_setting**\ (\ name\: :ref:`String<class_String>`, default_value\: :ref:`Variant<class_Variant>` = null\ ) |const|
 
 Returns the value of the setting identified by ``name``. If the setting doesn't exist and ``default_value`` is specified, the value of ``default_value`` is returned. Otherwise, ``null`` is returned.
 
@@ -11771,7 +11853,7 @@ Returns the value of the setting identified by ``name``. If the setting doesn't 
 
 .. rst-class:: classref-method
 
-:ref:`Variant<class_Variant>` **get_setting_with_override** **(** :ref:`StringName<class_StringName>` name **)** |const|
+:ref:`Variant<class_Variant>` **get_setting_with_override**\ (\ name\: :ref:`StringName<class_StringName>`\ ) |const|
 
 Similar to :ref:`get_setting<class_ProjectSettings_method_get_setting>`, but applies feature tag overrides if any exists and is valid.
 
@@ -11802,7 +11884,7 @@ Then the overridden setting will be returned instead if the project is running o
 
 .. rst-class:: classref-method
 
-:ref:`String<class_String>` **globalize_path** **(** :ref:`String<class_String>` path **)** |const|
+:ref:`String<class_String>` **globalize_path**\ (\ path\: :ref:`String<class_String>`\ ) |const|
 
 Returns the absolute, native OS path corresponding to the localized ``path`` (starting with ``res://`` or ``user://``). The returned path will vary depending on the operating system and user preferences. See :doc:`File paths in Godot projects <../tutorials/io/data_paths>` to see what those paths convert to. See also :ref:`localize_path<class_ProjectSettings_method_localize_path>`.
 
@@ -11830,7 +11912,7 @@ Returns the absolute, native OS path corresponding to the localized ``path`` (st
 
 .. rst-class:: classref-method
 
-:ref:`bool<class_bool>` **has_setting** **(** :ref:`String<class_String>` name **)** |const|
+:ref:`bool<class_bool>` **has_setting**\ (\ name\: :ref:`String<class_String>`\ ) |const|
 
 Returns ``true`` if a configuration value is present.
 
@@ -11842,7 +11924,7 @@ Returns ``true`` if a configuration value is present.
 
 .. rst-class:: classref-method
 
-:ref:`bool<class_bool>` **load_resource_pack** **(** :ref:`String<class_String>` pack, :ref:`bool<class_bool>` replace_files=true, :ref:`int<class_int>` offset=0 **)**
+:ref:`bool<class_bool>` **load_resource_pack**\ (\ pack\: :ref:`String<class_String>`, replace_files\: :ref:`bool<class_bool>` = true, offset\: :ref:`int<class_int>` = 0\ )
 
 Loads the contents of the .pck or .zip file specified by ``pack`` into the resource filesystem (``res://``). Returns ``true`` on success.
 
@@ -11858,7 +11940,7 @@ Loads the contents of the .pck or .zip file specified by ``pack`` into the resou
 
 .. rst-class:: classref-method
 
-:ref:`String<class_String>` **localize_path** **(** :ref:`String<class_String>` path **)** |const|
+:ref:`String<class_String>` **localize_path**\ (\ path\: :ref:`String<class_String>`\ ) |const|
 
 Returns the localized path (starting with ``res://``) corresponding to the absolute, native OS ``path``. See also :ref:`globalize_path<class_ProjectSettings_method_globalize_path>`.
 
@@ -11870,7 +11952,7 @@ Returns the localized path (starting with ``res://``) corresponding to the absol
 
 .. rst-class:: classref-method
 
-:ref:`Error<enum_@GlobalScope_Error>` **save** **(** **)**
+:ref:`Error<enum_@GlobalScope_Error>` **save**\ (\ )
 
 Saves the configuration to the ``project.godot`` file.
 
@@ -11884,7 +11966,7 @@ Saves the configuration to the ``project.godot`` file.
 
 .. rst-class:: classref-method
 
-:ref:`Error<enum_@GlobalScope_Error>` **save_custom** **(** :ref:`String<class_String>` file **)**
+:ref:`Error<enum_@GlobalScope_Error>` **save_custom**\ (\ file\: :ref:`String<class_String>`\ )
 
 Saves the configuration to a custom file. The file extension must be ``.godot`` (to save in text-based :ref:`ConfigFile<class_ConfigFile>` format) or ``.binary`` (to save in binary format). You can also save ``override.cfg`` file, which is also text, but can be used in exported projects unlike other formats.
 
@@ -11896,7 +11978,7 @@ Saves the configuration to a custom file. The file extension must be ``.godot`` 
 
 .. rst-class:: classref-method
 
-void **set_as_basic** **(** :ref:`String<class_String>` name, :ref:`bool<class_bool>` basic **)**
+|void| **set_as_basic**\ (\ name\: :ref:`String<class_String>`, basic\: :ref:`bool<class_bool>`\ )
 
 Defines if the specified setting is considered basic or advanced. Basic settings will always be shown in the project settings. Advanced settings will only be shown if the user enables the "Advanced Settings" option.
 
@@ -11908,7 +11990,7 @@ Defines if the specified setting is considered basic or advanced. Basic settings
 
 .. rst-class:: classref-method
 
-void **set_as_internal** **(** :ref:`String<class_String>` name, :ref:`bool<class_bool>` internal **)**
+|void| **set_as_internal**\ (\ name\: :ref:`String<class_String>`, internal\: :ref:`bool<class_bool>`\ )
 
 Defines if the specified setting is considered internal. An internal setting won't show up in the Project Settings dialog. This is mostly useful for addons that need to store their own internal settings without exposing them directly to the user.
 
@@ -11920,7 +12002,7 @@ Defines if the specified setting is considered internal. An internal setting won
 
 .. rst-class:: classref-method
 
-void **set_initial_value** **(** :ref:`String<class_String>` name, :ref:`Variant<class_Variant>` value **)**
+|void| **set_initial_value**\ (\ name\: :ref:`String<class_String>`, value\: :ref:`Variant<class_Variant>`\ )
 
 Sets the specified setting's initial value. This is the value the setting reverts to.
 
@@ -11932,7 +12014,7 @@ Sets the specified setting's initial value. This is the value the setting revert
 
 .. rst-class:: classref-method
 
-void **set_order** **(** :ref:`String<class_String>` name, :ref:`int<class_int>` position **)**
+|void| **set_order**\ (\ name\: :ref:`String<class_String>`, position\: :ref:`int<class_int>`\ )
 
 Sets the order of a configuration value (influences when saved to the config file).
 
@@ -11944,7 +12026,7 @@ Sets the order of a configuration value (influences when saved to the config fil
 
 .. rst-class:: classref-method
 
-void **set_restart_if_changed** **(** :ref:`String<class_String>` name, :ref:`bool<class_bool>` restart **)**
+|void| **set_restart_if_changed**\ (\ name\: :ref:`String<class_String>`, restart\: :ref:`bool<class_bool>`\ )
 
 Sets whether a setting requires restarting the editor to properly take effect.
 
@@ -11958,7 +12040,7 @@ Sets whether a setting requires restarting the editor to properly take effect.
 
 .. rst-class:: classref-method
 
-void **set_setting** **(** :ref:`String<class_String>` name, :ref:`Variant<class_Variant>` value **)**
+|void| **set_setting**\ (\ name\: :ref:`String<class_String>`, value\: :ref:`Variant<class_Variant>`\ )
 
 Sets the value of a setting.
 
@@ -11986,3 +12068,4 @@ This can also be used to erase custom project settings. To do this change the se
 .. |static| replace:: :abbr:`static (This method doesn't need an instance to be called, so it can be called directly using the class name.)`
 .. |operator| replace:: :abbr:`operator (This method describes a valid operator to use with this type as left-hand operand.)`
 .. |bitfield| replace:: :abbr:`BitField (This value is an integer composed as a bitmask of the following flags.)`
+.. |void| replace:: :abbr:`void (No return value.)`
