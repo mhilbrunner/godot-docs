@@ -33,13 +33,15 @@ Properties
 .. table::
    :widths: auto
 
-   +-------------------------------+------------------------------------------------------------------------+-------------------+
-   | :ref:`Vector2<class_Vector2>` | :ref:`motion_mirroring<class_ParallaxLayer_property_motion_mirroring>` | ``Vector2(0, 0)`` |
-   +-------------------------------+------------------------------------------------------------------------+-------------------+
-   | :ref:`Vector2<class_Vector2>` | :ref:`motion_offset<class_ParallaxLayer_property_motion_offset>`       | ``Vector2(0, 0)`` |
-   +-------------------------------+------------------------------------------------------------------------+-------------------+
-   | :ref:`Vector2<class_Vector2>` | :ref:`motion_scale<class_ParallaxLayer_property_motion_scale>`         | ``Vector2(1, 1)`` |
-   +-------------------------------+------------------------------------------------------------------------+-------------------+
+   +---------------------------------------------------------------------+------------------------------------------------------------------------+-------------------------------------------------------------------------------+
+   | :ref:`Vector2<class_Vector2>`                                       | :ref:`motion_mirroring<class_ParallaxLayer_property_motion_mirroring>` | ``Vector2(0, 0)``                                                             |
+   +---------------------------------------------------------------------+------------------------------------------------------------------------+-------------------------------------------------------------------------------+
+   | :ref:`Vector2<class_Vector2>`                                       | :ref:`motion_offset<class_ParallaxLayer_property_motion_offset>`       | ``Vector2(0, 0)``                                                             |
+   +---------------------------------------------------------------------+------------------------------------------------------------------------+-------------------------------------------------------------------------------+
+   | :ref:`Vector2<class_Vector2>`                                       | :ref:`motion_scale<class_ParallaxLayer_property_motion_scale>`         | ``Vector2(1, 1)``                                                             |
+   +---------------------------------------------------------------------+------------------------------------------------------------------------+-------------------------------------------------------------------------------+
+   | :ref:`PhysicsInterpolationMode<enum_Node_PhysicsInterpolationMode>` | physics_interpolation_mode                                             | ``2`` (overrides :ref:`Node<class_Node_property_physics_interpolation_mode>`) |
+   +---------------------------------------------------------------------+------------------------------------------------------------------------+-------------------------------------------------------------------------------+
 
 .. rst-class:: classref-section-separator
 
@@ -58,8 +60,8 @@ Property Descriptions
 
 .. rst-class:: classref-property-setget
 
-- void **set_mirroring** **(** :ref:`Vector2<class_Vector2>` value **)**
-- :ref:`Vector2<class_Vector2>` **get_mirroring** **(** **)**
+- |void| **set_mirroring**\ (\ value\: :ref:`Vector2<class_Vector2>`\ )
+- :ref:`Vector2<class_Vector2>` **get_mirroring**\ (\ )
 
 The interval, in pixels, at which the **ParallaxLayer** is drawn repeatedly. Useful for creating an infinitely scrolling background. If an axis is set to ``0``, the **ParallaxLayer** will be drawn only once along that direction.
 
@@ -81,8 +83,8 @@ The interval, in pixels, at which the **ParallaxLayer** is drawn repeatedly. Use
 
 .. rst-class:: classref-property-setget
 
-- void **set_motion_offset** **(** :ref:`Vector2<class_Vector2>` value **)**
-- :ref:`Vector2<class_Vector2>` **get_motion_offset** **(** **)**
+- |void| **set_motion_offset**\ (\ value\: :ref:`Vector2<class_Vector2>`\ )
+- :ref:`Vector2<class_Vector2>` **get_motion_offset**\ (\ )
 
 The ParallaxLayer's offset relative to the parent ParallaxBackground's :ref:`ParallaxBackground.scroll_offset<class_ParallaxBackground_property_scroll_offset>`.
 
@@ -98,8 +100,8 @@ The ParallaxLayer's offset relative to the parent ParallaxBackground's :ref:`Par
 
 .. rst-class:: classref-property-setget
 
-- void **set_motion_scale** **(** :ref:`Vector2<class_Vector2>` value **)**
-- :ref:`Vector2<class_Vector2>` **get_motion_scale** **(** **)**
+- |void| **set_motion_scale**\ (\ value\: :ref:`Vector2<class_Vector2>`\ )
+- :ref:`Vector2<class_Vector2>` **get_motion_scale**\ (\ )
 
 Multiplies the ParallaxLayer's motion. If an axis is set to ``0``, it will not scroll.
 
@@ -110,3 +112,4 @@ Multiplies the ParallaxLayer's motion. If an axis is set to ``0``, it will not s
 .. |static| replace:: :abbr:`static (This method doesn't need an instance to be called, so it can be called directly using the class name.)`
 .. |operator| replace:: :abbr:`operator (This method describes a valid operator to use with this type as left-hand operand.)`
 .. |bitfield| replace:: :abbr:`BitField (This value is an integer composed as a bitmask of the following flags.)`
+.. |void| replace:: :abbr:`void (No return value.)`
